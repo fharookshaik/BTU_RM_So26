@@ -8,7 +8,7 @@ import yt_dlp
 import json
 from pathlib import Path
 
-class MinifiedHarmonixLoader:
+class HarmonixLoader:
     """
     Minified Harmonix Set loader.
     Downloads repo + YouTube audio + pre-processes to mel-spectrograms + annotations.

@@ -46,5 +46,18 @@ Dataset Link: https://github.com/urinieto/harmonixset
 
 ### TODO:
 
-- [ ] Prepare Dataset
-- [ ] 
+- [ ] Prepare Datasets
+  - [ ] Harmonix
+  - [ ] SALAMI pop
+  - [ ] RWC pop
+  - [ ] Isophonics
+- [ ] Perform EDA on all the individual datasets
+- [ ] Preprocess and streamline all datasets
+- [ ] Implement Models
+  - [ ] Harmonic CNN
+  - [ ] SpecTNT Baseline
+  - [ ] Improved SpecTNT Model
+- [ ] Implement Test metrics
+- [ ] Test & compare the models
+- [ ] Prepare Report
+- [ ] Prepare Poster (Grade 50%)
