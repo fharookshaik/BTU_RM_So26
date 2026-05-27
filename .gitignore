@@ -14,3 +14,7 @@ wheels/
 data/
 models/
 logs/
+*.bkp
+
+# macOS specific files
+.DS_Store
