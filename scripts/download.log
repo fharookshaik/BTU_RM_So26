@@ -1,0 +1,864 @@
+Already have 51 files, need to download 861 files
+[1/861] 0010_andjusticeforall... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0010_andjusticeforall.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'https://www.youtube.com/watch?v=_fKAsvJrFes']' returned non-zero exit status 1.
+[2/861] 0013_athingaboutyou... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0013_athingaboutyou.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'https://www.youtube.com/watch?v=IdcO-V1Iu1Q']' returned non-zero exit status 1.
+[3/861] 0023_bewareoftheboys... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0023_bewareoftheboys.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=DJztXj2GPfk']' returned non-zero exit status 1.
+[4/861] 0030_bodymovin... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0030_bodymovin.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=KUs-yeZJ-NE']' returned non-zero exit status 1.
+[5/861] 0040_bustamove... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0040_bustamove.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=tZQQGX24Teg']' returned non-zero exit status 1.
+[6/861] 0046_castlesmadeofsand... OK
+[7/861] 0052_collector... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0052_collector.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=BTIWzR2pifc']' returned non-zero exit status 1.
+[8/861] 0059_cupidshuffle... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0059_cupidshuffle.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=xC8aTLQJUUU']' returned non-zero exit status 1.
+[9/861] 0061_dabutt... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0061_dabutt.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=FShE0VifCYs']' returned non-zero exit status 1.
+[10/861] 0073_disturbia... OK
+[11/861] 0074_djgotusfallininlove... OK
+[12/861] 0075_dontcha... OK
+[13/861] 0077_dontsweat... OK
+[14/861] 0078_donttouchme... OK
+[15/861] 0079_dontyouwantme... OK
+[16/861] 0080_down... OK
+[17/861] 0081_downonme... OK
+[18/861] 0082_dragosteadintei... OK
+[19/861] 0083_dragthewaters... OK
+[20/861] 0084_dropitlikeitshot... OK
+[21/861] 0085_electricboogie... OK
+[22/861] 0086_escapade... OK
+[23/861] 0087_evacuate... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0087_evacuate.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=A68j28KQaik']' returned non-zero exit status 1.
+[24/861] 0088_everybody... OK
+[25/861] 0090_fearofthedarklive... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0090_fearofthedarklive.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'https://www.youtube.com/watch?v=FoiHX9azZeQ']' returned non-zero exit status 1.
+[26/861] 0091_fellonblackdays... OK
+[27/861] 0092_fergalicious... OK
+[28/861] 0093_fireburning... OK
+[29/861] 0094_fireflies... OK
+[30/861] 0095_firework... OK
+[31/861] 0096_fivemagics... OK
+[32/861] 0098_floods... OK
+[33/861] 0099_forgetyou... OK
+[34/861] 0100_futureperfecttense... OK
+[35/861] 0101_galang... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0101_galang.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=2YJBCpBlMVI']' returned non-zero exit status 1.
+[36/861] 0102_gangstaluv... OK
+[37/861] 0104_getbusy... OK
+[38/861] 0105_getdownonit... OK
+[39/861] 0106_getitshawty... OK
+[40/861] 0107_getlow... OK
+[41/861] 0108_getup... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0108_getup.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=huZFThnetjo']' returned non-zero exit status 1.
+[42/861] 0109_geturfreakon... OK
+[43/861] 0110_girlsandboys... OK
+[44/861] 0111_girlsonfilm... OK
+[45/861] 0112_giveitup... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0112_giveitup.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'https://www.youtube.com/watch?v=rTUgs5vNF4k']' returned non-zero exit status 1.
+[46/861] 0113_giveituptome... OK
+[47/861] 0114_givemeeverything... OK
+[48/861] 0115_gonnamakeyousweat... OK
+[49/861] 0116_goodies... OK
+[50/861] 0117_goodmorningblackfriday... OK
+[51/861] 0118_grenade... OK
+[52/861] 0119_gunpowderandlead... OK
+[53/861] 0120_hallowedbethyname... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0120_hallowedbethyname.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=J51LPlP-s9o']' returned non-zero exit status 1.
+[54/861] 0122_heardemall... OK
+[55/861] 0123_heavyduty... OK
+[56/861] 0124_hello... OK
+[57/861] 0125_hellogoodmorning... OK
+[58/861] 0126_heymami... OK
+[59/861] 0127_hollabackgirl... OK
+[60/861] 0128_homecoming... OK
+[61/861] 0129_hotinherre... OK
+[62/861] 0130_hotstuff... OK
+[63/861] 0131_iamthebest... OK
+[64/861] 0132_iceicebaby... OK
+[65/861] 0133_ifeellove... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0133_ifeellove.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=Nm-ISatLDG0']' returned non-zero exit status 1.
+[66/861] 0134_igotmine... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0134_igotmine.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=tuR0aCQALDE']' returned non-zero exit status 1.
+[67/861] 0135_igottafeeling... OK
+[68/861] 0136_igotyoudancing... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0136_igotyoudancing.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=Y1dhvJfrukw']' returned non-zero exit status 1.
+[69/861] 0137_iknowyouwantme... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0137_iknowyouwantme.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=IjtdUG84ZEg']' returned non-zero exit status 1.
+[70/861] 0138_ilikeit... OK
+[71/861] 0139_imcomingout... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0139_imcomingout.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=zbYcte4ZEgQ']' returned non-zero exit status 1.
+[72/861] 0140_impacto... OK
+[73/861] 0141_indaclub... OK
+[74/861] 0142_indestructible... OK
+[75/861] 0143_informer... OK
+[76/861] 0144_ishotthesheriff... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0144_ishotthesheriff.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=2XiYUYcpsT4']' returned non-zero exit status 1.
+[77/861] 0145_iwantyouback... OK
+[78/861] 0148_jesusofsuburbia... OK
+[79/861] 0149_johnnyguitar... OK
+[80/861] 0150_justdance... OK
+[81/861] 0151_kingofdancehall... OK
+[82/861] 0152_kingofrock... OK
+[83/861] 0153_lalaland... OK
+[84/861] 0155_lapdance... OK
+[85/861] 0156_lastnight... OK
+[86/861] 0157_leanwitit... OK
+[87/861] 0158_letitrock... OK
+[88/861] 0159_letthemusicplay... OK
+[89/861] 0160_likeag6... OK
+[90/861] 0161_limelight... OK
+[91/861] 0162_lobotomy... OK
+[92/861] 0164_low... OK
+[93/861] 0165_lucretia... OK
+[94/861] 0166_macarena... OK
+[95/861] 0167_makesomenoise... OK
+[96/861] 0168_maneater... OK
+[97/861] 0169_manicdepression... OK
+[98/861] 0170_manyshadesofblack... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0170_manyshadesofblack.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=LXwUdwAZL3Q']' returned non-zero exit status 1.
+[99/861] 0171_marchofthepigs... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0171_marchofthepigs.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=6mDQNRs5JCs']' returned non-zero exit status 1.
+[100/861] 0172_marrythenight... OK
+[101/861] 0173_massiveattack... OK
+[102/861] 0174_maythisbelove... OK
+[103/861] 0175_meddle... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0175_meddle.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=YsyxQD_IoyM']' returned non-zero exit status 1.
+[104/861] 0176_megasus... OK
+[105/861] 0177_milkshake... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0177_milkshake.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=pGL2rytTraA']' returned non-zero exit status 1.
+[106/861] 0178_mountainman... OK
+[107/861] 0179_moveslikejagger... OK
+[108/861] 0181_mrsaxobeat... OK
+[109/861] 0182_mycurse... OK
+[110/861] 0183_mynameisjonas... OK
+[111/861] 0184_myprerogative... OK
+[112/861] 0185_nasty... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0185_nasty.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=9zoA0L2u-JQ']' returned non-zero exit status 1.
+[113/861] 0186_nearlylostyou... OK
+[114/861] 0189_neversaynever... OK
+[115/861] 0190_newfang... OK
+[116/861] 0191_newslang... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0191_newslang.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=zYwCmcB0XMw']' returned non-zero exit status 1.
+[117/861] 0194_nomoretears... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0194_nomoretears.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'https://www.youtube.com/watch?v=fLK95K_t6nY']' returned non-zero exit status 1.
+[118/861] 0195_nookie... OK
+[119/861] 0197_nothinonyou... OK
+[120/861] 0198_nowthatwefoundlove... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0198_nowthatwefoundlove.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=NNEgUPKxk7A']' returned non-zero exit status 1.
+[121/861] 0199_numberofthebeast2... OK
+[122/861] 0200_oceansize... OK
+[123/861] 0201_oh... OK
+[124/861] 0204_onlyamemory... OK
+[125/861] 0207_oopsohmy... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0207_oopsohmy.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=Hb37Nh_Sg4g']' returned non-zero exit status 1.
+[126/861] 0208_opp... OK
+[127/861] 0209_paparazzi... OK
+[128/861] 0212_peoplegotalotofnerve... OK
+[129/861] 0214_planetrock... OK
+[130/861] 0215_pointofknowreturn... OK
+[131/861] 0216_poison... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0216_poison.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=YejxyaFyUHc']' returned non-zero exit status 1.
+[132/861] 0217_pokerface... OK
+[133/861] 0218_policyoftruth... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0218_policyoftruth.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'https://www.youtube.com/watch?v=qnPe13_kUjc (needs to be -0.08% sped-up)']' returned non-zero exit status 1.
+[134/861] 0219_pondereplay... OK
+[135/861] 0220_promiscuous... OK
+[136/861] 0222_realgoodlooking... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0222_realgoodlooking.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=d1PjsJL9UnM']' returned non-zero exit status 1.
+[137/861] 0223_reallove... OK
+[138/861] 0226_rendezvu... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0226_rendezvu.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=--MLlsBJFhw']' returned non-zero exit status 1.
+[139/861] 0227_replay... OK
+[140/861] 0229_ridingonthewind... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0229_ridingonthewind.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=3K_12NlT_bQ']' returned non-zero exit status 1.
+[141/861] 0231_rightthurr... OK
+[142/861] 0233_rocknrollnightmare... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0233_rocknrollnightmare.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=jzuxUSab_7c']' returned non-zero exit status 1.
+[143/861] 0234_roundandround... OK
+[144/861] 0235_rudeboy... OK
+[145/861] 0236_rumpshaker... OK
+[146/861] 0237_run... OK
+[147/861] 0238_sambadejaneiro... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0238_sambadejaneiro.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=ftWAgzb6wyw']' returned non-zero exit status 1.
+[148/861] 0239_sandm... OK
+[149/861] 0240_sandstorm... OK
+[150/861] 0241_satellite... OK
+[151/861] 0242_satisfaction... OK
+[152/861] 0243_saucyjack... OK
+[153/861] 0244_sayaah... OK
+[154/861] 0245_sayhey... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0245_sayhey.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=A0fYKguHFcQ']' returned non-zero exit status 1.
+[155/861] 0246_scenario... OK
+[156/861] 0247_scream... OK
+[157/861] 0248_screamingfor... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0248_screamingfor.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=mCNNQxdO9H8']' returned non-zero exit status 1.
+[158/861] 0249_sensualseduction... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0249_sensualseduction.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=Y1PVmANeyAg']' returned non-zero exit status 1.
+[159/861] 0250_sexyandiknowit... OK
+[160/861] 0251_sexychick... OK
+[161/861] 0254_sixsixsix... OK
+[162/861] 0255_sleepwalker... OK
+[163/861] 0257_somebodytolove... OK
+[164/861] 0258_sorry... OK
+[165/861] 0259_spiceupyourlife... OK
+[166/861] 0261_starships... OK
+[167/861] 0262_stash... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0262_stash.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=8OfQCAj2Ppg']' returned non-zero exit status 1.
+[168/861] 0264_stereolove... OK
+[169/861] 0265_straightlines... OK
+[170/861] 0266_straightup... OK
+[171/861] 0267_superfreak... OK
+[172/861] 0268_supersonic... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0268_supersonic.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=J3nPLoODtGU']' returned non-zero exit status 1.
+[173/861] 0269_sweettalk... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0269_sweettalk.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=da0fukVrbtE']' returned non-zero exit status 1.
+[174/861] 0270_takeovercontrol... OK
+[175/861] 0271_teachmehowtodougie... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0271_teachmehowtodougie.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=aZglqkCRNt8']' returned non-zero exit status 1.
+[176/861] 0272_teachmehowtojerk... OK
+[177/861] 0273_technologic... OK
+[178/861] 0274_temperature... OK
+[179/861] 0276_texasflood... OK
+[180/861] 0277_thashiznit... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0277_thashiznit.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'https://www.youtube.com/watch?v=fjebEZmRDcg']' returned non-zero exit status 1.
+[181/861] 0278_thatsthahomie... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0278_thatsthahomie.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=k5xaFOxidyc']' returned non-zero exit status 1.
+[182/861] 0279_thebreaks... OK
+[183/861] 0280_thedayitriedtolive... OK
+[184/861] 0281_theedgeofglory... OK
+[185/861] 0282_thegreatsatan... OK
+[186/861] 0283_thehumptydance... OK
+[187/861] 0284_thehustle... OK
+[188/861] 0285_thekill... OK
+[189/861] 0286_theragelive... OK
+[190/861] 0287_therewasatime... OK
+[191/861] 0288_thewayiare... OK
+[192/861] 0289_thisisexile... OK
+[193/861] 0290_thisishowwedoit... OK
+[194/861] 0291_thrasher... OK
+[195/861] 0292_timeslikethese... OK
+[196/861] 0293_tomsawyer2... OK
+[197/861] 0294_tonighttonight... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0294_tonighttonight.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=QzlNFcT2aOE']' returned non-zero exit status 1.
+[198/861] 0295_toxic... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0295_toxic.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=LOZuxwVk7TU']' returned non-zero exit status 1.
+[199/861] 0296_transmaniaconmc... OK
+[200/861] 0297_troublecomesrunning... OK
+[201/861] 0298_turnmeon... OK
+[202/861] 0299_turnthebeataround... OK
+[203/861] 0301_unclejohnsband... OK
+[204/861] 0302_venus... OK
+[205/861] 0303_wakeupdead... OK
+[206/861] 0304_weaponofchoice... OK
+[207/861] 0305_wenospeakamericano... OK
+[208/861] 0306_werunthis... OK
+[209/861] 0307_whatdoesntkillyou... OK
+[210/861] 0308_whatislove... OK
+[211/861] 0309_whatsmyname... OK
+[212/861] 0310_whineup... OK
+[213/861] 0311_whipmyhair... OK
+[214/861] 0312_whitefalconfuzz... OK
+[215/861] 0314_whoomp... OK
+[216/861] 0315_whygo... OK
+[217/861] 0316_wildones... OK
+[218/861] 0318_windup... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0318_windup.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=YOIFZf6mUwc']' returned non-zero exit status 1.
+[219/861] 0319_withoutyou... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0319_withoutyou.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=g83dXwRkPhg']' returned non-zero exit status 1.
+[220/861] 0320_wolflikeme... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0320_wolflikeme.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=j1-xRk6llh4']' returned non-zero exit status 1.
+[221/861] 0321_wonderwall... OK
+[222/861] 0322_wordup... OK
+[223/861] 0323_yeah... OK
+[224/861] 0324_yeah3x... OK
+[225/861] 0325_ymca... OK
+[226/861] 0326_yougotittherightstuff... OK
+[227/861] 0327_youmakemefeel... OK
+[228/861] 0328_youmakemefeeldc... OK
+[229/861] 0329_youreajerk... OK
+[230/861] 0330_50waystosaygoodbye... OK
+[231/861] 0331_againstallodds... OK
+[232/861] 0332_alejandro... OK
+[233/861] 0333_allday... OK
+[234/861] 0334_alltherightplaces... OK
+[235/861] 0335_allyourlife... OK
+[236/861] 0336_alonewithyou... OK
+[237/861] 0337_alwayssomethingthere... OK
+[238/861] 0338_animal... OK
+[239/861] 0339_aslongasyouloveme... OK
+[240/861] 0340_backintime... OK
+[241/861] 0341_baggageclaim... OK
+[242/861] 0342_bangpop... OK
+[243/861] 0343_banjo... OK
+[244/861] 0344_beautifullife... OK
+[245/861] 0345_beinlovetonight... OK
+[246/861] 0346_birthdaydress... OK
+[247/861] 0347_bitch... OK
+[248/861] 0348_blackout... OK
+[249/861] 0349_blow... OK
+[250/861] 0350_blowme... OK
+[251/861] 0351_blowup... OK
+[252/861] 0352_boogiewonderland... OK
+[253/861] 0353_bottomsup... OK
+[254/861] 0354_brandnewday... OK
+[255/861] 0355_brokenhearted... OK
+[256/861] 0356_californiagurls... OK
+[257/861] 0357_cheers... OK
+[258/861] 0358_children... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0358_children.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=9dFnIHA35x0']' returned non-zero exit status 1.
+[259/861] 0359_cominghome... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0359_cominghome.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=k-ImCpNqbJw']' returned non-zero exit status 1.
+[260/861] 0360_coolerthanme... OK
+[261/861] 0361_countrymustbecountrywide... OK
+[262/861] 0362_crazygirl... OK
+[263/861] 0363_darkside... OK
+[264/861] 0364_deuces... OK
+[265/861] 0365_dirtroadanthem... OK
+[266/861] 0366_domino... OK
+[267/861] 0367_dontdreamitsover... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0367_dontdreamitsover.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=J9gKyRmic20']' returned non-zero exit status 1.
+[268/861] 0368_dontwakemeup... OK
+[269/861] 0369_dontyouworrychild... OK
+[270/861] 0370_downonme... OK
+[271/861] 0371_downunder... OK
+[272/861] 0372_drinkinmyhand... OK
+[273/861] 0373_driveby... OK
+[274/861] 0374_drunkonyou... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0374_drunkonyou.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=HpFaI0dKAHc']' returned non-zero exit status 1.
+[275/861] 0375_dynamite... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0375_dynamite.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=NBoqI5JaVF0']' returned non-zero exit status 1.
+[276/861] 0376_earthquake... OK
+[277/861] 0377_eatdirt... OK
+[278/861] 0378_effinperfect... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0378_effinperfect.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=ocDlOD1Hw9k']' returned non-zero exit status 1.
+[279/861] 0379_et... OK
+[280/861] 0380_everybodytalks... OK
+[281/861] 0381_everythingyouwant... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0381_everythingyouwant.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=rZoD8JEFjAE']' returned non-zero exit status 1.
+[282/861] 0382_fatherofmine... OK
+[283/861] 0383_feelsoclose... OK
+[284/861] 0384_finally... OK
+[285/861] 0385_fiveoclock... OK
+[286/861] 0386_footloose... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0386_footloose.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=yd8ULcdniQE']' returned non-zero exit status 1.
+[287/861] 0387_free... OK
+[288/861] 0388_gangnamstyle... OK
+[289/861] 0389_gettinoveryou... OK
+[290/861] 0390_getyourselfbackhome... OK
+[291/861] 0391_givemeallyourluvin... OK
+[292/861] 0392_givemeyourhand... OK
+[293/861] 0393_giveyourheartabreak... OK
+[294/861] 0394_godgavemetoyou... OK
+[295/861] 0395_gold... OK
+[296/861] 0396_goodfeeling... OK
+[297/861] 0397_goodlife... OK
+[298/861] 0398_goodtime... OK
+[299/861] 0399_gotmygirls... OK
+[300/861] 0400_heatofthemoment... OK
+[301/861] 0401_hello... OK
+[302/861] 0402_herestous... OK
+[303/861] 0403_heybaby... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0403_heybaby.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=1hr3Inwbdfc']' returned non-zero exit status 1.
+[304/861] 0404_holditagainstme... OK
+[305/861] 0405_home... OK
+[306/861] 0406_honeybee... OK
+[307/861] 0407_humpinaround... OK
+[308/861] 0408_icanonlyimagine... OK
+[309/861] 0409_idontlikeyou... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0409_idontlikeyou.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=XIHwEaCY9As']' returned non-zero exit status 1.
+[310/861] 0410_idontwantthisnighttoend... OK
+[311/861] 0411_ifihadyou... OK
+[312/861] 0412_ifitmakesyouhappy... OK
+[313/861] 0413_ifyoucouldonlysee... OK
+[314/861] 0414_illbe... OK
+[315/861] 0415_illbewaiting... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0415_illbewaiting.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=lQfnAwFG6Jw']' returned non-zero exit status 1.
+[316/861] 0416_impossible... OK
+[317/861] 0417_imtoosexy... OK
+[318/861] 0418_inthedark... OK
+[319/861] 0419_itgirl... OK
+[320/861] 0420_itsrainingmen... OK
+[321/861] 0421_ittakestwo... OK
+[322/861] 0422_itwillrain... OK
+[323/861] 0423_iwannago... OK
+[324/861] 0424_justadream... OK
+[325/861] 0425_justakiss... OK
+[326/861] 0426_justcantgetenough... OK
+[327/861] 0427_justthewayyouare... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0427_justthewayyouare.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=LjhCEhWiKXk']' returned non-zero exit status 1.
+[328/861] 0428_kingofanything... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0428_kingofanything.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=eR7-AUmiNcA']' returned non-zero exit status 1.
+[329/861] 0429_kissinu... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0429_kissinu.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=nhT_6Yz-Nbc']' returned non-zero exit status 1.
+[330/861] 0430_lastfridaynight... OK
+[331/861] 0431_letitrain... OK
+[332/861] 0432_letsgo... OK
+[333/861] 0433_lighters... OK
+[334/861] 0434_lights... OK
+[335/861] 0435_lookatmenow... OK
+[336/861] 0436_loveactually... OK
+[337/861] 0437_lovelikewoe... OK
+[338/861] 0438_loverlover... OK
+[339/861] 0439_lovethewayyoulie... OK
+[340/861] 0440_loveyoulikealovesong... OK
+[341/861] 0441_lovingyoutonight... OK
+[342/861] 0442_lullaby... OK
+[343/861] 0443_magic... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0443_magic.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=Cq-NShfefks']' returned non-zero exit status 1.
+[344/861] 0444_maybe... OK
+[345/861] 0445_memories... OK
+[346/861] 0446_midnightcity... OK
+[347/861] 0447_mindyourmanners... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0447_mindyourmanners.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=nKyRBCW-Rcg']' returned non-zero exit status 1.
+[348/861] 0448_mine... OK
+[349/861] 0449_misery... OK
+[350/861] 0450_more... OK
+[351/861] 0451_mrknowitall... OK
+[352/861] 0452_myfirstkiss... OK
+[353/861] 0453_mygirl... OK
+[354/861] 0454_myohmy... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0454_myohmy.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=3b6sYhdqKqA']' returned non-zero exit status 1.
+[355/861] 0455_nevertearusapart... OK
+[356/861] 0456_nohands... OK
+[357/861] 0457_nothing... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0457_nothing.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=znauK-vpMI4']' returned non-zero exit status 1.
+[358/861] 0458_notorious... OK
+[359/861] 0459_notoveryou... OK
+[360/861] 0460_numb... OK
+[361/861] 0461_obsession... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0461_obsession.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=KEwxG8UfG44']' returned non-zero exit status 1.
+[362/861] 0462_oldalabama... OK
+[363/861] 0463_onemorenight... OK
+[364/861] 0464_oneofus... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0464_oneofus.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=7Gx1Pv02w3Q']' returned non-zero exit status 1.
+[365/861] 0465_onething... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0465_onething.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=Y1xs_xPb46M']' returned non-zero exit status 1.
+[366/861] 0466_onthedarkside... OK
+[367/861] 0467_onthefloor... OK
+[368/861] 0468_openarms... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0468_openarms.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=3ByIYof4mqo']' returned non-zero exit status 1.
+[369/861] 0469_ordinaryworld... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0469_ordinaryworld.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=wUgLge_MPIM']' returned non-zero exit status 1.
+[370/861] 0470_ours... OK
+[371/861] 0471_paradise... OK
+[372/861] 0472_partofme... OK
+[373/861] 0473_payphone... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0473_payphone.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=LNArCBr6rrs']' returned non-zero exit status 1.
+[374/861] 0474_pleasedontgo... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0474_pleasedontgo.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=HpixdTlYlKU']' returned non-zero exit status 1.
+[375/861] 0475_poisonedwithlove... OK
+[376/861] 0476_pontoon... OK
+[377/861] 0477_poundthealarm... OK
+[378/861] 0478_prayforyou... OK
+[379/861] 0479_pricetag... OK
+[380/861] 0480_raiseyourglass... OK
+[381/861] 0481_reallove... OK
+[382/861] 0482_redsolocup... OK
+[383/861] 0483_ridinsolo... OK
+[384/861] 0484_rockthatbody... OK
+[385/861] 0485_rollinginthedeep... OK
+[386/861] 0486_rundatback... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0486_rundatback.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=ssmGB7mbXCk']' returned non-zero exit status 1.
+[387/861] 0487_secrets... OK
+[388/861] 0488_september... OK
+[389/861] 0489_shakeyourbody... OK
+[390/861] 0490_showme... OK
+[391/861] 0491_skyscraper... OK
+[392/861] 0492_sm... OK
+[393/861] 0493_somebodysheartbreak... OK
+[394/861] 0494_somebodythatiusedtoknow... OK
+[395/861] 0495_someonelikeyou... OK
+[396/861] 0496_sparksfly... OK
+[397/861] 0497_speakers... OK
+[398/861] 0498_springsteen... OK
+[399/861] 0499_starbuckssmile... OK
+[400/861] 0500_stay... OK
+[401/861] 0501_stayawhile... OK
+[402/861] 0502_stronger... OK
+[403/861] 0503_stucklikeglue... OK
+[404/861] 0504_suspiciousminds... OK
+[405/861] 0505_takeitoff... OK
+[406/861] 0506_takemehometonight... OK
+[407/861] 0507_teenagedream... OK
+[408/861] 0508_tennesseeme... OK
+[409/861] 0509_thelazysong... OK
+[410/861] 0510_theonethatgotaway... OK
+[411/861] 0511_theonlyexception... OK
+[412/861] 0512_theshowgoeson... OK
+[413/861] 0513_thetime... OK
+[414/861] 0514_thetimeofmylife... OK
+[415/861] 0515_thisafternoon... OK
+[416/861] 0516_thisorthat... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0516_thisorthat.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=yviQ2gIUDks']' returned non-zero exit status 1.
+[417/861] 0517_tilltheworldends... OK
+[418/861] 0518_timeaftertime... OK
+[419/861] 0519_titanium... OK
+[420/861] 0520_tonight... OK
+[421/861] 0521_tooclose... OK
+[422/861] 0522_turnupthemusic... OK
+[423/861] 0523_ucanttouchthis... OK
+[424/861] 0524_undoit... OK
+[425/861] 0525_venus... OK
+[426/861] 0526_waitingoutsidethelines... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0526_waitingoutsidethelines.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=_AU1yyy_At4']' returned non-zero exit status 1.
+[427/861] 0527_wantuback... OK
+[428/861] 0528_werunthenight... OK
+[429/861] 0529_werwhower... OK
+[430/861] 0530_whatthehell... OK
+[431/861] 0531_whenwestandtogether... OK
+[432/861] 0532_whistle... OK
+[433/861] 0533_whosays... OK
+[434/861] 0534_wideawake... OK
+[435/861] 0535_withoutyou... OK
+[436/861] 0536_workout... OK
+[437/861] 0537_writteninthestars... OK
+[438/861] 0538_you... OK
+[439/861] 0539_youandi... OK
+[440/861] 0540_youandme... OK
+[441/861] 0541_youdroppedabombonme... OK
+[442/861] 0542_yougetwhatyougive... OK
+[443/861] 0543_yougonnafly... OK
+[444/861] 0544_yougottabe... OK
+[445/861] 0545_youkeepmehangingon... OK
+[446/861] 0546_18days... OK
+[447/861] 0547_1901boflexdpassionpitremix... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0547_1901boflexdpassionpitremix.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=S0Oy-dNjRUg']' returned non-zero exit status 1.
+[448/861] 0548_2getherextended... OK
+[449/861] 0549_515... OK
+[450/861] 0550_aboutyounow... OK
+[451/861] 0551_accordingtoyou... OK
+[452/861] 0552_addicted... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0552_addicted.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=Z-ChyVXzbjA']' returned non-zero exit status 1.
+[453/861] 0553_alivefeatthegoodnatured... OK
+[454/861] 0554_allalright... OK
+[455/861] 0555_allaroundme... OK
+[456/861] 0556_allaroundtheworld... OK
+[457/861] 0557_alligator... OK
+[458/861] 0558_allnightlong... OK
+[459/861] 0559_alltherightmoves... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0559_alltherightmoves.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=qrOeGCJdZe4']' returned non-zero exit status 1.
+[460/861] 0560_almostlovenow... OK
+[461/861] 0561_alorsondanse... OK
+[462/861] 0562_alreadygone... OK
+[463/861] 0564_americanboybenny... OK
+[464/861] 0565_americanhoney... OK
+[465/861] 0566_americanwoman... OK
+[466/861] 0567_anythingcouldhappen... OK
+[467/861] 0568_apologize... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0568_apologize.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=ZSM3w1v-A_Y']' returned non-zero exit status 1.
+[468/861] 0569_arrow... OK
+[469/861] 0570_aslongasyouloveme... OK
+[470/861] 0571_atlantis... OK
+[471/861] 0572_awake... OK
+[472/861] 0573_babyludacris... OK
+[473/861] 0574_badromanceappboyz... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0574_badromanceappboyz.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=2OeIAwSVurg']' returned non-zero exit status 1.
+[474/861] 0575_badromanceskrillexremix... OK
+[475/861] 0576_barbrastreisand... OK
+[476/861] 0577_battlefieldmainversion... OK
+[477/861] 0578_bealright... OK
+[478/861] 0579_beatitstudioversion... OK
+[479/861] 0580_beautiful... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0580_beautiful.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=eAfyFTzZDMM']' returned non-zero exit status 1.
+[480/861] 0581_beautifulcarlyrae... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0581_beautifulcarlyrae.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=384aT-yAfNI']' returned non-zero exit status 1.
+[481/861] 0582_beautifulday... OK
+[482/861] 0583_beautifulgirls... OK
+[483/861] 0585_beautyandabeat... OK
+[484/861] 0586_bed... OK
+[485/861] 0587_bedrock... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0587_bedrock.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=Ha80ZaecGkQ']' returned non-zero exit status 1.
+[486/861] 0588_believe... OK
+[487/861] 0589_bestieverhad... OK
+[488/861] 0590_betterintime... OK
+[489/861] 0591_biggirlsdontcry... OK
+[490/861] 0592_blameit... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0592_blameit.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=CFg-fhNpW5w']' returned non-zero exit status 1.
+[491/861] 0593_blameitradioedit... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0593_blameitradioedit.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=OpoBYs_JmZg']' returned non-zero exit status 1.
+[492/861] 0594_bleedinglove... OK
+[493/861] 0595_blonde... OK
+[494/861] 0596_bonbon... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0596_bonbon.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=9O72RLP5fF4']' returned non-zero exit status 1.
+[495/861] 0597_boomboomguetta... OK
+[496/861] 0598_boomboompow... OK
+[497/861] 0599_boyfriend... OK
+[498/861] 0600_breakeven... OK
+[499/861] 0602_breaktheice... OK
+[500/861] 0603_breaktheicejasonnevinsmix... OK
+[501/861] 0604_bustitbabypart2... OK
+[502/861] 0607_cantholdus... OK
+[503/861] 0608_canttellmenothing... OK
+[504/861] 0609_carryon... OK
+[505/861] 0610_castle... OK
+[506/861] 0611_catchingfeelings... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0611_catchingfeelings.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=axyfEusEuho']' returned non-zero exit status 1.
+[507/861] 0613_celebrationbennybenassi... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0613_celebrationbennybenassi.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=EDa4i7MxQjw']' returned non-zero exit status 1.
+[508/861] 0614_cinema... OK
+[509/861] 0615_circus... OK
+[510/861] 0616_citygirl... OK
+[511/861] 0617_citylights... OK
+[512/861] 0618_clocks... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0618_clocks.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=B1EyEgRiBys']' returned non-zero exit status 1.
+[513/861] 0619_closer... OK
+[514/861] 0620_closertands... OK
+[515/861] 0621_clubcanthandleme... OK
+[516/861] 0622_clumsy... OK
+[517/861] 0623_comeongethigher... OK
+[518/861] 0625_complicated... OK
+[519/861] 0626_coolerthanme... OK
+[520/861] 0627_cowboyboots... OK
+[521/861] 0628_crankthatsouljaboy... OK
+[522/861] 0629_crush... OK
+[523/861] 0630_crushcrushcrush... OK
+[524/861] 0631_curiosity... OK
+[525/861] 0632_cyclone... OK
+[526/861] 0633_dancingmachine... OK
+[527/861] 0634_dangerous... OK
+[528/861] 0635_daynnite... OK
+[529/861] 0636_daynnitecrookersremix... OK
+[530/861] 0637_daynniteremix... OK
+[531/861] 0638_deadandgone... OK
+[532/861] 0639_dieinyourarms... OK
+[533/861] 0640_disturbia2... OK
+[534/861] 0642_dontconfess... OK
+[535/861] 0643_dontrush... OK
+[536/861] 0644_dontsayaword... OK
+[537/861] 0645_dontstopthemusic... OK
+[538/861] 0647_dontthinkidontthinkaboutit... OK
+[539/861] 0648_donttrustme... OK
+[540/861] 0649_down... OK
+[541/861] 0650_downlilwayne... OK
+[542/861] 0651_doyouremember... OK
+[543/861] 0652_drovemewild... OK
+[544/861] 0653_dynamite... OK
+[545/861] 0654_dynamitemixinmarc... OK
+[546/861] 0655_earthquakey... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0655_earthquakey.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=uWDGlIZjXz8']' returned non-zero exit status 1.
+[547/861] 0657_enursbonfire... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0657_enursbonfire.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=ndSZ9LNzvjc']' returned non-zero exit status 1.
+[548/861] 0658_evacuatethedancefloor... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0658_evacuatethedancefloor.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=fiXhGlAiDE4']' returned non-zero exit status 1.
+[549/861] 0659_everybody... OK
+[550/861] 0660_everymorning... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0660_everymorning.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=OKUO3R2zhXw']' returned non-zero exit status 1.
+[551/861] 0661_everythingaboutyou... OK
+[552/861] 0662_everytimewetouch... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0662_everytimewetouch.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=kfbbLf_-KEw']' returned non-zero exit status 1.
+[553/861] 0663_explosions... OK
+[554/861] 0664_eyesextendedmix... OK
+[555/861] 0665_fall... OK
+[556/861] 0666_fallin... OK
+[557/861] 0668_fallinganthem... OK
+[558/861] 0669_fastforwardffwd... OK
+[559/861] 0670_fearless... OK
+[560/861] 0671_feedback... OK
+[561/861] 0672_feelitinmybones... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0672_feelitinmybones.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=eFmgr217Cxw']' returned non-zero exit status 1.
+[562/861] 0673_feelsliketonight... OK
+[563/861] 0674_feelsocloseextendedmix... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0674_feelsocloseextendedmix.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=g8a1equFIu4']' returned non-zero exit status 1.
+[564/861] 0676_figure8... OK
+[565/861] 0677_fireburning... OK
+[566/861] 0678_fireflies... OK
+[567/861] 0679_firsttime... OK
+[568/861] 0680_fixaheart... OK
+[569/861] 0681_flashinglights... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0681_flashinglights.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=mWtIxc38xNE']' returned non-zero exit status 1.
+[570/861] 0682_forever... OK
+[571/861] 0683_foreverextendedmix... OK
+[572/861] 0685_forgottolaugh... OK
+[573/861] 0686_fortheloveofadaughter... OK
+[574/861] 0687_getouttamyway... OK
+[575/861] 0688_getthepartystarted... OK
+[576/861] 0689_gettinoveryou... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0689_gettinoveryou.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=dXZ8MGTbcP4']' returned non-zero exit status 1.
+[577/861] 0690_givemeeverything... OK
+[578/861] 0691_givesyouhell... OK
+[579/861] 0692_giveyourheartabreakdos... OK
+[580/861] 0693_gold... OK
+[581/861] 0695_goodbyegoodbye... OK
+[582/861] 0696_goodgirlsgobad... OK
+[583/861] 0697_goodlife... OK
+[584/861] 0698_goodtime... OK
+[585/861] 0699_gotmoney... OK
+[586/861] 0700_gottabesomebody... OK
+[587/861] 0701_gottabeyou... OK
+[588/861] 0702_greenlight... OK
+[589/861] 0704_guitarstringweddingring... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0704_guitarstringweddingring.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=5Z8I5if9XyA']' returned non-zero exit status 1.
+[590/861] 0705_haditall... OK
+[591/861] 0706_halcyon... OK
+[592/861] 0707_halfwaygone... OK
+[593/861] 0708_haloradioedit... OK
+[594/861] 0709_hangingon... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0709_hangingon.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=J6OvFCoKaZc']' returned non-zero exit status 1.
+[595/861] 0710_hardjeezy... OK
+[596/861] 0711_heartheartheartbreak... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0711_heartheartheartbreak.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=_l0xrW0W8eA']' returned non-zero exit status 1.
+[597/861] 0712_heartless... OK
+[598/861] 0713_heartofgoldnow... OK
+[599/861] 0714_hell... OK
+[600/861] 0715_hellodadalife... OK
+[601/861] 0716_heroheroine... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0716_heroheroine.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=hYNznNBeDnQ']' returned non-zero exit status 1.
+[602/861] 0717_heysoulsister... OK
+[603/861] 0718_heytheredelilah... OK
+[604/861] 0719_hipsdontlie... OK
+[605/861] 0721_holdup... OK
+[606/861] 0723_hotelroomservice... OK
+[607/861] 0724_hotmessdj... OK
+[608/861] 0725_hotncold... OK
+[609/861] 0726_hotplay... OK
+[610/861] 0727_howcomeyoudontwantme... OK
+[611/861] 0728_howyouremindme... OK
+[612/861] 0729_hurricane... OK
+[613/861] 0730_hurtssogood... OK
+[614/861] 0731_icouldntbeyourfriend... OK
+[615/861] 0732_idontwannabeinlove... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0732_idontwannabeinlove.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=YgGLl8CanQo']' returned non-zero exit status 1.
+[616/861] 0733_ifihadyou... OK
+[617/861] 0734_iftodaywasyourlastday... OK
+[618/861] 0735_ifuseeamy... OK
+[619/861] 0736_igotafeeling... OK
+[620/861] 0737_ihatethispart... OK
+[621/861] 0738_ihearnoises... OK
+[622/861] 0739_ikissedagirl... OK
+[623/861] 0740_ikissedagirljasonnevins... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0740_ikissedagirljasonnevins.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=IOgL-LryFZU']' returned non-zero exit status 1.
+[624/861] 0741_iknowyoucare... OK
+[625/861] 0742_iknowyouwantme2... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0742_iknowyouwantme2.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=0S3foICf5uI']' returned non-zero exit status 1.
+[626/861] 0743_iminloveiwannadoit... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0743_iminloveiwannadoit.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=R1TLePn3NSs']' returned non-zero exit status 1.
+[627/861] 0744_immabe... OK
+[628/861] 0745_immabewolf... OK
+[629/861] 0746_imnotyourhero... OK
+[630/861] 0747_imreal... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0747_imreal.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=b8J61aicIo0']' returned non-zero exit status 1.
+[631/861] 0748_imyours... OK
+[632/861] 0749_indestructible2... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0749_indestructible2.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=ueI8HU1cmNE']' returned non-zero exit status 1.
+[633/861] 0750_ineedyourlove... OK
+[634/861] 0751_inlovewithagirl... OK
+[635/861] 0752_inmyhead... OK
+[636/861] 0753_inreallife... OK
+[637/861] 0755_intothenight... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0755_intothenight.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=Q8DLbM_T7pc']' returned non-zero exit status 1.
+[638/861] 0756_istillmissyou... OK
+[639/861] 0758_itgetsbetter... OK
+[640/861] 0759_itgirljasonnevins... OK
+[641/861] 0760_iwannarock... OK
+[642/861] 0761_iwant... OK
+[643/861] 0762_iwantitthatway... OK
+[644/861] 0763_iwasafool... OK
+[645/861] 0764_iwish... OK
+[646/861] 0765_jimmyiovine... OK
+[647/861] 0766_justdance... OK
+[648/861] 0767_justfine... OK
+[649/861] 0768_keepsgettinbetter... OK
+[650/861] 0769_killa... OK
+[651/861] 0770_kingofmycastle... OK
+[652/861] 0771_kisskissmainversion... OK
+[653/861] 0772_kissmebackcrytonight... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0772_kissmebackcrytonight.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'https://www.youtube.com/watch?v=6uwEAwWkit0 (needs to be 3.05% sped-up)']' returned non-zero exit status 1.
+[654/861] 0773_kissmethruthephone... OK
+[655/861] 0774_knockyoudown... OK
+[656/861] 0775_knockyoudownbimbojones... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0775_knockyoudownbimbojones.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=l_oZzCzdV-A']' returned non-zero exit status 1.
+[657/861] 0776_krazy... OK
+[658/861] 0777_lebump... OK
+[659/861] 0778_letitrock... OK
+[660/861] 0779_letitrockfilthy... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0779_letitrockfilthy.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=NT1czawGceY']' returned non-zero exit status 1.
+[661/861] 0780_letmebereal... OK
+[662/861] 0781_lettinggoduttylove... OK
+[663/861] 0782_lifeafteryou... OK
+[664/861] 0783_lighton... OK
+[665/861] 0784_lightweight... OK
+[666/861] 0785_littleliesnow... OK
+[667/861] 0786_livelikeweredying... OK
+[668/861] 0787_liveyourlife... OK
+[669/861] 0789_livingroom... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0789_livingroom.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=74ezTBSuKy0']' returned non-zero exit status 1.
+[670/861] 0790_locapeople... OK
+[671/861] 0791_lollipop... OK
+[672/861] 0792_lovedrunk... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0792_lovedrunk.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=o0c-kC8xZ-I']' returned non-zero exit status 1.
+[673/861] 0793_lovegame... OK
+[674/861] 0794_lovegamedave... OK
+[675/861] 0796_loveinthisclub... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0796_loveinthisclub.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'https://www.youtube.com/watch?v=FckYSttengg']' returned non-zero exit status 1.
+[676/861] 0797_loveisgone... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0797_loveisgone.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'https://www.youtube.com/watch?v=8FJ_-dQaHsk']' returned non-zero exit status 1.
+[677/861] 0798_lovelikethis... OK
+[678/861] 0799_lovesexmagic... OK
+[679/861] 0800_lovesexmagicjason... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0800_lovesexmagicjason.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=D6HwxkLwDuU']' returned non-zero exit status 1.
+[680/861] 0801_lovesong... OK
+[681/861] 0802_lovestoned... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0802_lovestoned.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=QUuKvHHt8Sk']' returned non-zero exit status 1.
+[682/861] 0803_lovestory... OK
+[683/861] 0805_lovetheysay... OK
+[684/861] 0806_mad... OK
+[685/861] 0807_makemebetter... OK
+[686/861] 0808_makethemoney... OK
+[687/861] 0810_memoriesextended... OK
+[688/861] 0811_miami2ibiza... OK
+[689/861] 0812_miserybimbo... OK
+[690/861] 0813_missindependent... OK
+[691/861] 0814_mistake... OK
+[692/861] 0815_mondaymondaymonday... OK
+[693/861] 0817_morethanthis... OK
+[694/861] 0818_mrsaxobeatext... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0818_mrsaxobeatext.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=edHQPKMVTOc']' returned non-zero exit status 1.
+[695/861] 0819_myblood... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0819_myblood.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=pQsE2gnERjo']' returned non-zero exit status 1.
+[696/861] 0820_mychickbad... OK
+[697/861] 0821_myfeelingsforyou... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0821_myfeelingsforyou.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'https://www.youtube.com/watch?v=DpjWgGeFksM']' returned non-zero exit status 1.
+[698/861] 0823_mylifewouldsuckwithoutyou... OK
+[699/861] 0824_mylifewouldsuckwithoutyous... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0824_mylifewouldsuckwithoutyous.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=xvUckd0NVEg']' returned non-zero exit status 1.
+[700/861] 0825_myloveislikeastar... OK
+[701/861] 0826_myohmy... OK
+[702/861] 0827_needyounow... OK
+[703/861] 0828_neoncathedral... OK
+[704/861] 0829_nevertoolate... OK
+[705/861] 0830_nightwatch... OK
+[706/861] 0831_noair... OK
+[707/861] 0832_noone... OK
+[708/861] 0833_northshore... OK
+[709/861] 0834_nosurprise... OK
+[710/861] 0835_notetogod... OK
+[711/861] 0836_notmyselftonight... OK
+[712/861] 0837_nottonight... OK
+[713/861] 0838_nowimallmessedup... OK
+[714/861] 0839_nowyouseeit... OK
+[715/861] 0840_obsessed... OK
+[716/861] 0841_obsessedcahill... OK
+[717/861] 0842_obsessionstatic... OK
+[718/861] 0843_omgalmighty... OK
+[719/861] 0844_ondirecting... OK
+[720/861] 0845_onefoot... OK
+[721/861] 0846_onelove... OK
+[722/861] 0847_onestepatatime... OK
+[723/861] 0848_onething... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0848_onething.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=Y1xs_xPb46M']' returned non-zero exit status 1.
+[724/861] 0849_onlyyou... OK
+[725/861] 0850_onlyyoucanlovemethisway... OK
+[726/861] 0851_openurmind... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0851_openurmind.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=PMeVfI86hfk']' returned non-zero exit status 1.
+[727/861] 0852_oursong... OK
+[728/861] 0853_outonthetown... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0853_outonthetown.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=SqjEE34upvM']' returned non-zero exit status 1.
+[729/861] 0854_overmyheadcablecar... OK
+[730/861] 0855_overyou... OK
+[731/861] 0856_paperbackhead... OK
+[732/861] 0857_paralyzer... OK
+[733/861] 0858_peoplearepeople... OK
+[734/861] 0859_picturesofyou... OK
+[735/861] 0860_pieceofme... OK
+[736/861] 0861_pingmebaby... OK
+[737/861] 0862_pleasedontleaveme... OK
+[738/861] 0863_pleasedontleavemedigi... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0863_pleasedontleavemedigi.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'https://www.youtube.com/watch?v=1_9SjxZsD0w']' returned non-zero exit status 1.
+[739/861] 0864_pleasedontleavememain... OK
+[740/861] 0865_pocketfulofsunshine... OK
+[741/861] 0866_pokerfacedave... OK
+[742/861] 0867_pokerfacedos... OK
+[743/861] 0868_puton... OK
+[744/861] 0869_raiseyourweapon... OK
+[745/861] 0870_ratedr... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0870_ratedr.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=mV_hcVYefoY']' returned non-zero exit status 1.
+[746/861] 0872_readyfortheweekend... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0872_readyfortheweekend.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=XO4msvIA7cw']' returned non-zero exit status 1.
+[747/861] 0873_readyornot... OK
+[748/861] 0874_realize... OK
+[749/861] 0875_redbelt... OK
+[750/861] 0876_rehab... OK
+[751/861] 0877_releasemenow... OK
+[752/861] 0878_replay... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0878_replay.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=COMaG7pObgE']' returned non-zero exit status 1.
+[753/861] 0879_ridinsoloian... OK
+[754/861] 0880_righthere... OK
+[755/861] 0881_rightround... OK
+[756/861] 0882_rightroundbenny... OK
+[757/861] 0883_rocksatmywindow... OK
+[758/861] 0884_rockstar... OK
+[759/861] 0886_rudeboy... OK
+[760/861] 0888_russianroulettejump... OK
+[761/861] 0889_samelove... OK
+[762/861] 0890_samemistakes... OK
+[763/861] 0891_savetheworld... OK
+[764/861] 0892_saveyoutonight... OK
+[765/861] 0893_say... OK
+[766/861] 0894_sayheyiloveyou... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0894_sayheyiloveyou.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=A0fYKguHFcQ']' returned non-zero exit status 1.
+[767/861] 0895_scarymonsters... OK
+[768/861] 0897_sentimentaltune... OK
+[769/861] 0898_sexyback... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0898_sexyback.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=3gOHvDP_vCs']' returned non-zero exit status 1.
+[770/861] 0899_sexycani... OK
+[771/861] 0900_sexychickakon... OK
+[772/861] 0901_sexydj... OK
+[773/861] 0902_shakeitradiomix... OK
+[774/861] 0903_shakethatbubblenow... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0903_shakethatbubblenow.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=aL4S0IBngFs']' returned non-zero exit status 1.
+[775/861] 0904_shewolf... OK
+[776/861] 0905_shocktoyoursystem... OK
+[777/861] 0906_shutupanddrive... OK
+[778/861] 0907_skyscraper... OK
+[779/861] 0908_sober... OK
+[780/861] 0909_sofineed... OK
+[781/861] 0910_solo... OK
+[782/861] 0911_someday... OK
+[783/861] 0912_somenights... OK
+[784/861] 0913_somuchlove... OK
+[785/861] 0914_soobviousnow... OK
+[786/861] 0915_sosletthemusicplay... OK
+[787/861] 0916_sowhat... OK
+[788/861] 0917_spacemanties... OK
+[789/861] 0918_starstrukk... OK
+[790/861] 0919_stereolove... OK
+[791/861] 0920_stopandstare... OK
+[792/861] 0921_stronger... OK
+[793/861] 0922_suffocate... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0922_suffocate.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=PbhGPHWlut0']' returned non-zero exit status 1.
+[794/861] 0923_sunandmoon... OK
+[795/861] 0924_sunisup... OK
+[796/861] 0925_sweetdisposition... OK
+[797/861] 0926_sweetthing... OK
+[798/861] 0927_swing... OK
+[799/861] 0928_takeabow... OK
+[800/861] 0929_takeovercontrolext... OK
+[801/861] 0930_takeyourtime... OK
+[802/861] 0931_takeyouthere... OK
+[803/861] 0932_tattoo... OK
+[804/861] 0933_teardropsonmyguitar... OK
+[805/861] 0934_teenagedreamkaskade... OK
+[806/861] 0936_tequieroacoustic... OK
+[807/861] 0937_thatsnotmyname... OK
+[808/861] 0938_thebusiness... OK
+[809/861] 0939_thecure... OK
+[810/861] 0940_thehousethatbuiltme... OK
+[811/861] 0941_theocean... OK
+[812/861] 0943_thetheayer... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0943_thetheayer.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'https://www.youtube.com/watch?v=JxPdgU9uONo']' returned non-zero exit status 1.
+[813/861] 0945_thewayiareradio... OK
+[814/861] 0946_thinkingofyou... OK
+[815/861] 0947_thiskiss... OK
+[816/861] 0948_thislove... OK
+[817/861] 0949_throwitinthebag... OK
+[818/861] 0950_throwyourhandsup... OK
+[819/861] 0951_thunder... OK
+[820/861] 0952_tiktok... OK
+[821/861] 0953_tilltheworldends2... OK
+[822/861] 0954_timeaftertimevan... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0954_timeaftertimevan.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=r39vLIpq3lM']' returned non-zero exit status 1.
+[823/861] 0955_tinylittlebows... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0955_tinylittlebows.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=7DPQWd4l1Ms']' returned non-zero exit status 1.
+[824/861] 0956_tonightimgettingoveryou... OK
+[825/861] 0958_turnmeup... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0958_turnmeup.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=LIuFee4_mRc']' returned non-zero exit status 1.
+[826/861] 0959_turnthisclubaround... OK
+[827/861] 0960_umbrella... OK
+[828/861] 0961_unfaithfulfemme... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0961_unfaithfulfemme.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=g9XDTT7MZzo']' returned non-zero exit status 1.
+[829/861] 0962_usagainsttheworldjason... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0962_usagainsttheworldjason.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'https://www.youtube.com/watch?v=G-nnWAOt6s4']' returned non-zero exit status 1.
+[830/861] 0964_wakingupinvegas... OK
+[831/861] 0965_wakingupinvegascalvin... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0965_wakingupinvegascalvin.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=yGKHqv0P64Q']' returned non-zero exit status 1.
+[832/861] 0966_wakingupinvegascalvinh... OK
+[833/861] 0967_walkingonadream... OK
+[834/861] 0968_walltowall... OK
+[835/861] 0969_webelongtogether... OK
+[836/861] 0970_whataboutnow... OK
+[837/861] 0971_whatayawantfromme... OK
+[838/861] 0972_whatchasay... OK
+[839/861] 0973_whateverittakes... OK
+[840/861] 0974_whateveryoulike... OK
+[841/861] 0975_whathappensinvegas... OK
+[842/861] 0977_wheelsnow... OK
+[843/861] 0978_whenigrowup... OK
+[844/861] 0979_whenlovetakesover... OK
+[845/861] 0980_whenyouleave... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0980_whenyouleave.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'https://www.youtube.com/watch?v=n_NpuCS90jA (needs to be 3.6% sped-up)']' returned non-zero exit status 1.
+[846/861] 0981_whenyouregone... FAILED: Command '['yt-dlp', '-x', '--audio-format', 'wav', '--audio-quality', '0', '--postprocessor-args', 'ffmpeg:-ac 1 -ar 16000', '-o', '/Users/fharook/Documents/BTU/BTU_RM_So26/data/harmonixset/audio/0981_whenyouregone.%(ext)s', '--no-playlist', '--quiet', '--no-warnings', 'http://www.youtube.com/watch?v=0G3_kG5FFfQ']' returned non-zero exit status 1.
+[847/861] 0982_whoknewdos... OK
+[848/861] 0983_whyamitheone... OK
+[849/861] 0986_winner... OK
+[850/861] 0987_withyou... OK
+[851/861] 0988_withyoukovas... OK
+[852/861] 0989_womanizer... OK
+[853/861] 0991_worryaboutyounow... OK
+[854/861] 0992_wrongthinwhiteduke... OK
+[855/861] 0993_youandidanny... OK
+[856/861] 0994_youbelongwithme... OK
+[857/861] 0995_youfoundme... OK
+[858/861] 0998_youregonnamissthis... OK
+[859/861] 0999_yourheartisamuscle... OK
+[860/861] 1000_yourloveismydrug... OK
+[861/861] 1001_yourloveismydrugdave... OK
+
+Failed downloads (145): ['0010_andjusticeforall', '0013_athingaboutyou', '0023_bewareoftheboys', '0030_bodymovin', '0040_bustamove', '0052_collector', '0059_cupidshuffle', '0061_dabutt', '0087_evacuate', '0090_fearofthedarklive', '0101_galang', '0108_getup', '0112_giveitup', '0120_hallowedbethyname', '0133_ifeellove', '0134_igotmine', '0136_igotyoudancing', '0137_iknowyouwantme', '0139_imcomingout', '0144_ishotthesheriff', '0170_manyshadesofblack', '0171_marchofthepigs', '0175_meddle', '0177_milkshake', '0185_nasty', '0191_newslang', '0194_nomoretears', '0198_nowthatwefoundlove', '0207_oopsohmy', '0216_poison', '0218_policyoftruth', '0222_realgoodlooking', '0226_rendezvu', '0229_ridingonthewind', '0233_rocknrollnightmare', '0238_sambadejaneiro', '0245_sayhey', '0248_screamingfor', '0249_sensualseduction', '0262_stash', '0268_supersonic', '0269_sweettalk', '0271_teachmehowtodougie', '0277_thashiznit', '0278_thatsthahomie', '0294_tonighttonight', '0295_toxic', '0318_windup', '0319_withoutyou', '0320_wolflikeme', '0358_children', '0359_cominghome', '0367_dontdreamitsover', '0374_drunkonyou', '0375_dynamite', '0378_effinperfect', '0381_everythingyouwant', '0386_footloose', '0403_heybaby', '0409_idontlikeyou', '0415_illbewaiting', '0427_justthewayyouare', '0428_kingofanything', '0429_kissinu', '0443_magic', '0447_mindyourmanners', '0454_myohmy', '0457_nothing', '0461_obsession', '0464_oneofus', '0465_onething', '0468_openarms', '0469_ordinaryworld', '0473_payphone', '0474_pleasedontgo', '0486_rundatback', '0516_thisorthat', '0526_waitingoutsidethelines', '0547_1901boflexdpassionpitremix', '0552_addicted', '0559_alltherightmoves', '0568_apologize', '0574_badromanceappboyz', '0580_beautiful', '0581_beautifulcarlyrae', '0587_bedrock', '0592_blameit', '0593_blameitradioedit', '0596_bonbon', '0611_catchingfeelings', '0613_celebrationbennybenassi', '0618_clocks', '0655_earthquakey', '0657_enursbonfire', '0658_evacuatethedancefloor', '0660_everymorning', '0662_everytimewetouch', '0672_feelitinmybones', '0674_feelsocloseextendedmix', '0681_flashinglights', '0689_gettinoveryou', '0704_guitarstringweddingring', '0709_hangingon', '0711_heartheartheartbreak', '0716_heroheroine', '0732_idontwannabeinlove', '0740_ikissedagirljasonnevins', '0742_iknowyouwantme2', '0743_iminloveiwannadoit', '0747_imreal', '0749_indestructible2', '0755_intothenight', '0772_kissmebackcrytonight', '0775_knockyoudownbimbojones', '0779_letitrockfilthy', '0789_livingroom', '0792_lovedrunk', '0796_loveinthisclub', '0797_loveisgone', '0800_lovesexmagicjason', '0802_lovestoned', '0818_mrsaxobeatext', '0819_myblood', '0821_myfeelingsforyou', '0824_mylifewouldsuckwithoutyous', '0848_onething', '0851_openurmind', '0853_outonthetown', '0863_pleasedontleavemedigi', '0870_ratedr', '0872_readyfortheweekend', '0878_replay', '0894_sayheyiloveyou', '0898_sexyback', '0903_shakethatbubblenow', '0922_suffocate', '0943_thetheayer', '0954_timeaftertimevan', '0955_tinylittlebows', '0958_turnmeup', '0961_unfaithfulfemme', '0962_usagainsttheworldjason', '0965_wakingupinvegascalvin', '0980_whenyouleave', '0981_whenyouregone']
