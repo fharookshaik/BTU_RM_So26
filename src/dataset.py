@@ -33,13 +33,11 @@ class SpecAugment:
 
 
 class HarmonixChunkDataset(Dataset):
-    def __init__(self, song_ids: list[str], annotations: dict, augment: bool = False,
-                 preload_features: bool = True):
+    def __init__(self, song_ids: list[str], annotations: dict, augment: bool = False):
         self.song_ids = song_ids
         self.annotations = annotations
         self.augment = augment
         self.augmenter = SpecAugment() if augment else None
-        self._feat_cache = None
 
         self.chunks = []
         for sid in song_ids:
@@ -58,9 +56,6 @@ class HarmonixChunkDataset(Dataset):
             for start in range(0, n_frames - CHUNK_FRAMES + 1, CHUNK_HOP_FRAMES):
                 self.chunks.append((sid, start))
 
-        if preload_features:
-            self._feat_cache = {sid: load_features(sid) for sid in song_ids}
-
     def __len__(self):
         return len(self.chunks)
 
@@ -69,10 +64,7 @@ class HarmonixChunkDataset(Dataset):
         ann = self.annotations[sid]
         end_frame = start_frame + CHUNK_FRAMES
 
-        if self._feat_cache is not None:
-            feat = self._feat_cache[sid]
-        else:
-            feat = load_features(sid)
+        feat = load_features(sid)
         if end_frame > feat.shape[1]:
             feat_chunk = np.pad(feat, ((0, 0), (0, end_frame - feat.shape[1])), mode="constant")[:, start_frame:end_frame]
         else:
@@ -113,10 +105,8 @@ def collate_fn(batch):
     return feats, boundaries, funcs, tokens
 
 
-def get_dataloader(song_ids, annotations, batch_size=128, shuffle=True, augment=False,
-                   preload_features=True):
-    dataset = HarmonixChunkDataset(song_ids, annotations, augment=augment,
-                                   preload_features=preload_features)
+def get_dataloader(song_ids, annotations, batch_size=128, shuffle=True, augment=False):
+    dataset = HarmonixChunkDataset(song_ids, annotations, augment=augment)
     return DataLoader(
         dataset,
         batch_size=batch_size,

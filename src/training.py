@@ -124,11 +124,7 @@ class Trainer:
         use_amp = self.scaler is not None
 
         n_total = min(len(loader), NUM_BATCHES_PER_EPOCH)
-        log_interval = max(1, NUM_BATCHES_PER_EPOCH // 10)
-        use_tqdm = sys.stdout.isatty()
-
-        if use_tqdm:
-            pbar = tqdm(total=n_total, desc=f"Epoch {self.epoch}", leave=False)
+        pbar = tqdm(total=n_total, desc=f"Epoch {self.epoch}", leave=False)
 
         for i, (feats, boundaries, funcs, tokens) in enumerate(loader):
             if i >= NUM_BATCHES_PER_EPOCH:
@@ -163,16 +159,10 @@ class Trainer:
             metrics_acc["loss"] = metrics_acc.get("loss", 0) + loss.item()
             n_batches += 1
 
-            if use_tqdm:
-                pbar.set_postfix({k: f"{v:.4f}" for k, v in extras.items()})
-                pbar.update(1)
-            elif (i + 1) % log_interval == 0 or i == 0:
-                print(f"Epoch {self.epoch:3d} | batch {i+1}/{n_total} | "
-                      f"{'  '.join(f'{k}:{v:.4f}' for k, v in extras.items())}",
-                      flush=True)
+            pbar.set_postfix({k: f"{v:.4f}" for k, v in extras.items()})
+            pbar.update(1)
 
-        if use_tqdm:
-            pbar.close()
+        pbar.close()
         return {k: v / n_batches for k, v in metrics_acc.items()}
 
     def _log_histograms(self, epoch):
@@ -234,22 +224,10 @@ class Trainer:
                 self.writer.add_scalar("val/epoch_time", val_time, epoch)
                 if epoch % 5 == 0:
                     self._log_histograms(epoch)
-                mem_mb = 0
-                if self.device == "cuda" and torch.cuda.is_available():
-                    mem_mb = torch.cuda.memory_allocated() / 1024 / 1024
-                elif self.device == "mps" and torch.backends.mps.is_available():
-                    try:
-                        mem_mb = torch.mps.current_allocated_memory() / 1024 / 1024
-                    except Exception:
-                        pass
-                if mem_mb > 0 and self.writer:
-                    self.writer.add_scalar("system/device_allocated_mb", mem_mb, epoch)
                 self.writer.flush()
 
-            if self.device == "cuda" and torch.cuda.is_available():
+            if self.device == "cuda":
                 torch.cuda.empty_cache()
-            elif self.device == "mps" and torch.backends.mps.is_available():
-                torch.mps.empty_cache()
 
             if val_loss < self.best_val_loss:
                 self.best_val_loss = val_loss
