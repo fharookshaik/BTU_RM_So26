@@ -5,7 +5,7 @@ import torch.nn.functional as F
 import torchaudio
 from scipy.ndimage import gaussian_filter1d
 
-HARMONIX_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "harmonixset")
+HARMONIX_DIR = "data/harmonixset"
 SEGMENT_DIR = os.path.join(HARMONIX_DIR, "dataset", "segments")
 AUDIO_DIR = os.path.join(HARMONIX_DIR, "audio")
 FEATURES_DIR = os.path.join(HARMONIX_DIR, "features")
@@ -74,8 +74,12 @@ def get_duration_from_segments(filepath):
     return 0.0
 
 def get_songs_with_audio():
-    audio_files = {os.path.splitext(f)[0] for f in os.listdir(AUDIO_DIR) if f.endswith(".wav")}
-    seg_files = {os.path.splitext(f)[0] for f in os.listdir(SEGMENT_DIR) if f.endswith(".txt")}
+    audio_files = set()
+    if os.path.isdir(AUDIO_DIR):
+        audio_files = {os.path.splitext(f)[0] for f in os.listdir(AUDIO_DIR) if f.endswith(".wav")}
+    seg_files = set()
+    if os.path.isdir(SEGMENT_DIR):
+        seg_files = {os.path.splitext(f)[0] for f in os.listdir(SEGMENT_DIR) if f.endswith(".txt")}
     return sorted(audio_files & seg_files)
 
 def generate_target_curves(segments, duration, boundary_width=0.6, hann_width=2.0):
