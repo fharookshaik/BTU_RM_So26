@@ -124,7 +124,12 @@ class Trainer:
         use_amp = self.scaler is not None
 
         n_total = min(len(loader), NUM_BATCHES_PER_EPOCH)
-        pbar = tqdm(total=n_total, desc=f"Epoch {self.epoch}", leave=False)
+        log_interval = max(1, NUM_BATCHES_PER_EPOCH // 10)
+        use_tqdm = sys.stdout.isatty()
+
+        if use_tqdm:
+            pbar = tqdm(total=n_total, desc=f"Epoch {self.epoch}", leave=False)
+
         for i, (feats, boundaries, funcs, tokens) in enumerate(loader):
             if i >= NUM_BATCHES_PER_EPOCH:
                 break
@@ -158,10 +163,16 @@ class Trainer:
             metrics_acc["loss"] = metrics_acc.get("loss", 0) + loss.item()
             n_batches += 1
 
-            pbar.set_postfix({k: f"{v:.4f}" for k, v in extras.items()})
-            pbar.update(1)
+            if use_tqdm:
+                pbar.set_postfix({k: f"{v:.4f}" for k, v in extras.items()})
+                pbar.update(1)
+            elif (i + 1) % log_interval == 0 or i == 0:
+                print(f"Epoch {self.epoch:3d} | batch {i+1}/{n_total} | "
+                      f"{'  '.join(f'{k}:{v:.4f}' for k, v in extras.items())}",
+                      flush=True)
 
-        pbar.close()
+        if use_tqdm:
+            pbar.close()
         return {k: v / n_batches for k, v in metrics_acc.items()}
 
     def _log_histograms(self, epoch):
