@@ -67,6 +67,8 @@ def postprocess_song(
 ) -> list[tuple[float, float, str]]:
     prob_funcs = 1.0 / (1.0 + np.exp(-func_curves))
     boundaries = peak_picking(boundary_curve)
+    if not boundaries or abs(boundaries[-1] - duration) > 0.01:
+        boundaries.append(duration)
     segments = assign_functions(prob_funcs, boundaries, duration)
     return segments
 

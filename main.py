@@ -1,14 +1,12 @@
-import os, sys, json, time
+import os, sys, json
 import numpy as np
 import torch
 from sklearn.model_selection import KFold
 
 from src.data_utils import (
-    get_songs_with_audio, load_all_annotations, load_segments,
-    get_duration_from_segments, SEGMENT_DIR, AUDIO_DIR, TARGET_HOP_TIME,
-    FUNCTION_LABELS, HARMONIX_DIR,
+    get_songs_with_audio, load_all_annotations, FUNCTION_LABELS,
 )
-from src.features import precompute_features, load_features, FEATURES_DIR
+from src.features import precompute_features, load_features
 from src.dataset import get_dataloader, CHUNK_FRAMES
 from src.models.harmonic_cnn import HarmonicCNN
 from src.models.spectnt import SpecTNT
@@ -19,9 +17,14 @@ from src.metrics import compute_metrics
 RESULTS_DIR = os.path.join(OUTPUTS_DIR, "results")
 os.makedirs(RESULTS_DIR, exist_ok=True)
 
-DEVICE = "mps" if torch.backends.mps.is_available() else "cpu"
-BATCH_SIZE = 8
-MAX_EPOCHS = 60
+if torch.cuda.is_available():
+    DEVICE = "cuda"
+elif torch.backends.mps.is_available():
+    DEVICE = "mps"
+else:
+    DEVICE = "cpu"
+BATCH_SIZE = 128
+MAX_EPOCHS = 100
 
 
 def predict_song_instant(model, sid, device, chunk_frames=CHUNK_FRAMES):
@@ -111,15 +114,21 @@ def run_fold(
     print(f"Train: {len(train_ids)} songs, Val: {len(val_ids)} songs")
     print(f"{'='*60}")
 
-    train_loader = get_dataloader(train_ids, annotations, batch_size=BATCH_SIZE, shuffle=True)
+    train_loader = get_dataloader(train_ids, annotations, batch_size=BATCH_SIZE, shuffle=True, augment=True)
     val_loader = get_dataloader(val_ids, annotations, batch_size=BATCH_SIZE, shuffle=False)
 
+    run_name = f"{model_name}/fold_{fold}"
     model = model_class()
-    trainer = Trainer(model, device=DEVICE, lr=0.0005, weight_decay=0.9, use_ctl=use_ctl)
-    trainer.fit(train_loader, val_loader, max_epochs=max_epochs)
+    trainer = Trainer(model, device=DEVICE, lr=0.0005, weight_decay=0.9,
+                      use_ctl=use_ctl, run_name=run_name)
 
-    ckpt_path = os.path.join(MODELS_DIR, f"{model_name}_fold{fold}_best.pt")
-    trainer.save_checkpoint(ckpt_path)
+    resume_path = os.path.join(MODELS_DIR, f"{model_name}_fold{fold}_checkpoint.pt")
+    if os.path.exists(resume_path):
+        trainer.load_checkpoint(resume_path)
+        print(f"Resuming {model_name} fold {fold} from epoch {trainer.epoch}")
+
+    trainer.fit(train_loader, val_loader, max_epochs=max_epochs,
+                ckpt_path=resume_path)
 
     model.load_state_dict(
         torch.load(
@@ -132,7 +141,7 @@ def run_fold(
 
     all_metrics = []
     est_seg_counts = []
-    one_hot_labels = set()
+    ref_seg_counts = []
     for sid in val_ids:
         ann = annotations[sid]
         duration = ann["duration"]
@@ -144,30 +153,39 @@ def run_fold(
 
         est_segments = postprocess_song(boundary_curve, func_curve, duration)
         est_seg_counts.append(len(est_segments))
-        ref_segments = ann["segments"]
-        for s, e, l in ref_segments:
-            one_hot_labels.add(l)
+        ref_seg_counts.append(len(ann["segments"]))
 
-        metrics = compute_metrics(ref_segments, est_segments, duration)
+        metrics = compute_metrics(ann["segments"], est_segments, duration)
         all_metrics.append(metrics)
 
-    avg_metrics = {k: np.mean([m[k] for m in all_metrics]) for k in all_metrics[0]}
+    avg_metrics = {k: float(np.mean([m[k] for m in all_metrics])) for k in all_metrics[0]}
     print(f"\nFold {fold} results ({model_name}):")
     for k, v in avg_metrics.items():
         print(f"  {k}: {v:.4f}")
-    print(f"  [DBG] est seg counts: min={min(est_seg_counts)} max={max(est_seg_counts)} mean={np.mean(est_seg_counts):.1f} <=1={sum(1 for c in est_seg_counts if c<=1)}")
-    print(f"  [DBG] ref labels: {sorted(one_hot_labels)}")
+    est_mean = np.mean(est_seg_counts)
+    ref_mean = np.mean(ref_seg_counts)
+    print(f"  Segments: est={est_mean:.1f} ref={ref_mean:.1f}")
+
+    if trainer.writer:
+        for k, v in avg_metrics.items():
+            trainer.writer.add_scalar(f"eval/{k}", v, 0)
+        trainer.writer.add_scalar("eval/num_estimated_segments", est_mean, 0)
+        trainer.writer.add_scalar("eval/num_reference_segments", ref_mean, 0)
+
+        text = f"Fold {fold} — {model_name}"
+        for k, v in avg_metrics.items():
+            text += f"\n  {k}: {v:.4f}"
+        text += f"\n  est segments: {est_mean:.1f}  ref segments: {ref_mean:.1f}"
+        trainer.writer.add_text("eval/summary", text, 0)
 
     return avg_metrics
 
 
-def main():
+def main(model_name=None, fold_idx=None):
     print(f"Device: {DEVICE}")
-    print(f"Songs with audio: {len(get_songs_with_audio())}")
-
     songs = get_songs_with_audio()
+    print(f"Songs with audio: {len(songs)}")
     precompute_features(songs, force=False)
-
     annotations = load_all_annotations()
     print(f"Loaded {len(annotations)} annotations")
 
@@ -180,28 +198,35 @@ def main():
         ("SpecTNT_CTL", SpecTNT, True),
     ]
 
+    selected_configs = model_configs
+    if model_name is not None:
+        lookup = {
+            "harmonic_cnn": model_configs[0],
+            "spectnt": model_configs[1],
+            "spectnt_ctl": model_configs[2],
+        }
+        selected_configs = [lookup[model_name]]
+
     all_results = {}
-    for model_name, model_class, use_ctl in model_configs:
+    for model_label, model_class, use_ctl in selected_configs:
         fold_metrics = []
-        for fold, (train_idx, val_idx) in enumerate(kf.split(song_ids)):
-            train_ids = song_ids[train_idx].tolist()
-            val_ids = song_ids[val_idx].tolist()
+        folds_to_run = [fold_idx] if fold_idx is not None else range(4)
+        for fold in folds_to_run:
+            train_idx, val_idx = list(kf.split(song_ids))[fold]
             metrics = run_fold(
-                model_class, model_name, train_ids, val_ids,
-                annotations, fold, use_ctl=use_ctl,
+                model_class, model_label, song_ids[train_idx].tolist(),
+                song_ids[val_idx].tolist(), annotations, fold, use_ctl=use_ctl,
             )
             fold_metrics.append(metrics)
 
-        avg_across_folds = {
-            k: float(np.mean([m[k] for m in fold_metrics])) for k in fold_metrics[0]
-        }
-        all_results[model_name] = {
+        avg = {k: float(np.mean([m[k] for m in fold_metrics])) for k in fold_metrics[0]}
+        all_results[model_label] = {
             "per_fold": [{k: float(v) for k, v in m.items()} for m in fold_metrics],
-            "average": avg_across_folds,
+            "average": avg,
         }
         print(f"\n{'='*60}")
-        print(f"{model_name} — Average across 4 folds:")
-        for k, v in avg_across_folds.items():
+        print(f"{model_label} — Average across {len(fold_metrics)} folds:")
+        for k, v in avg.items():
             print(f"  {k}: {v:.4f}")
 
     results_path = os.path.join(RESULTS_DIR, "results.json")
@@ -211,4 +236,9 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--model", choices=["harmonic_cnn", "spectnt", "spectnt_ctl"], default=None)
+    parser.add_argument("--fold", type=int, choices=[0, 1, 2, 3], default=None)
+    args = parser.parse_args()
+    main(model_name=args.model, fold_idx=args.fold)

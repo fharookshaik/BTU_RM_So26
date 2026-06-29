@@ -12,7 +12,7 @@ wheels/
 
 # Project specific files
 data/
-models/
+outputs/
 logs/
 *.bkp
 

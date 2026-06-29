@@ -1,20 +1,35 @@
-import os
 import numpy as np
 import torch
 from torch.utils.data import Dataset, DataLoader
+import torchaudio
 
 from src.data_utils import (
-    TARGET_HOP_TIME, TARGET_FRAME_RATE, NUM_OUTPUTS, NUM_FUNCTIONS,
-    FUNCTION_LABELS, LABEL_TO_IDX, get_songs_with_audio, load_segments,
-    generate_target_curves, get_duration_from_segments, get_section_tokens,
-    HARMONIX_DIR, SEGMENT_DIR, AUDIO_DIR,
+    TARGET_HOP_TIME, NUM_FUNCTIONS,
+    LABEL_TO_IDX,
+    get_section_tokens,
 )
-from src.features import load_features, FEATURES_DIR
+from src.features import load_features
 
-CHUNK_DURATION = 12.0
+CHUNK_DURATION = 24.0
 CHUNK_HOP = 3.0
 CHUNK_FRAMES = int(CHUNK_DURATION / TARGET_HOP_TIME)
 CHUNK_HOP_FRAMES = int(CHUNK_HOP / TARGET_HOP_TIME)
+
+
+class SpecAugment:
+    def __init__(self, freq_mask_param=8, time_mask_param=25, n_freq_masks=1, n_time_masks=1):
+        self.freq_mask = torchaudio.transforms.FrequencyMasking(freq_mask_param)
+        self.time_mask = torchaudio.transforms.TimeMasking(time_mask_param)
+        self.n_freq_masks = n_freq_masks
+        self.n_time_masks = n_time_masks
+
+    def __call__(self, spec: torch.Tensor) -> torch.Tensor:
+        x = spec.unsqueeze(0)
+        for _ in range(self.n_freq_masks):
+            x = self.freq_mask(x)
+        for _ in range(self.n_time_masks):
+            x = self.time_mask(x)
+        return x.squeeze(0)
 
 
 class HarmonixChunkDataset(Dataset):
@@ -22,7 +37,7 @@ class HarmonixChunkDataset(Dataset):
         self.song_ids = song_ids
         self.annotations = annotations
         self.augment = augment
-        self.feat_cache: dict[str, np.ndarray] = {}
+        self.augmenter = SpecAugment() if augment else None
 
         self.chunks = []
         for sid in song_ids:
@@ -38,7 +53,6 @@ class HarmonixChunkDataset(Dataset):
             n_frames = min(n_frames_ann, n_frames_feat)
             if n_frames < CHUNK_FRAMES:
                 continue
-            self.feat_cache[sid] = feat
             for start in range(0, n_frames - CHUNK_FRAMES + 1, CHUNK_HOP_FRAMES):
                 self.chunks.append((sid, start))
 
@@ -50,11 +64,15 @@ class HarmonixChunkDataset(Dataset):
         ann = self.annotations[sid]
         end_frame = start_frame + CHUNK_FRAMES
 
-        feat = self.feat_cache[sid]
+        feat = load_features(sid)
         if end_frame > feat.shape[1]:
             feat_chunk = np.pad(feat, ((0, 0), (0, end_frame - feat.shape[1])), mode="constant")[:, start_frame:end_frame]
         else:
             feat_chunk = feat[:, start_frame:end_frame]
+
+        feat_tensor = torch.from_numpy(feat_chunk).float()
+        if self.augment:
+            feat_tensor = self.augmenter(feat_tensor)
 
         T_ann = ann["boundary"].shape[0]
         if end_frame > T_ann:
@@ -72,7 +90,7 @@ class HarmonixChunkDataset(Dataset):
         section_tokens = get_section_tokens(ann["segments"])
 
         return (
-            torch.from_numpy(feat_chunk).float(),
+            feat_tensor,
             torch.from_numpy(b).float(),
             torch.from_numpy(f).float(),
             torch.tensor(section_tokens, dtype=torch.long),
@@ -87,12 +105,13 @@ def collate_fn(batch):
     return feats, boundaries, funcs, tokens
 
 
-def get_dataloader(song_ids, annotations, batch_size=8, shuffle=True, augment=False):
+def get_dataloader(song_ids, annotations, batch_size=128, shuffle=True, augment=False):
     dataset = HarmonixChunkDataset(song_ids, annotations, augment=augment)
     return DataLoader(
         dataset,
         batch_size=batch_size,
         shuffle=shuffle,
         collate_fn=collate_fn,
-        num_workers=0,
+        num_workers=2,
+        pin_memory=True,
     )

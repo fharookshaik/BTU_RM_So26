@@ -1,7 +1,8 @@
 import os
+import time
 import torch
 import torch.nn.functional as F
-from torch.utils.data import DataLoader
+from torch.utils.tensorboard import SummaryWriter
 from tqdm import tqdm
 
 from src.ctl_loss import ctl_loss_batch
@@ -16,9 +17,13 @@ BOUNDARY_LOSS_WEIGHT = 0.9
 FUNCTION_LOSS_WEIGHT = 0.1
 CTL_LOSS_WEIGHT = 0.1
 
+NUM_BATCHES_PER_EPOCH = 500
+MAX_GRAD_NORM = 1.0
+
 
 class Trainer:
-    def __init__(self, model, device="mps", lr=0.0005, weight_decay=0.9, use_ctl=False):
+    def __init__(self, model, device="cuda", lr=0.0005, weight_decay=0.9,
+                 use_ctl=False, run_name=None):
         self.model = model.to(device)
         self.device = device
         self.use_ctl = use_ctl
@@ -34,6 +39,27 @@ class Trainer:
         self.epoch = 0
         self.train_losses = []
         self.val_losses = []
+        self._last_grad_norm = 0.0
+        self._epoch_start = 0.0
+        self.scaler = torch.amp.GradScaler(device=device) if device == "cuda" else None
+
+        self.writer = None
+        if run_name is not None:
+            tb_dir = os.path.join(LOGS_DIR, "tb")
+            self.writer = SummaryWriter(log_dir=os.path.join(tb_dir, run_name))
+            try:
+                dummy = torch.randn(1, 96, 125, device=device)
+                self.writer.add_graph(self.model, dummy)
+            except Exception:
+                pass
+            hp = {
+                "lr": lr,
+                "weight_decay": weight_decay,
+                "use_ctl": use_ctl,
+                "batch_size": 128,
+                "chunk_duration": 24.0,
+            }
+            self.writer.add_hparams(hp, {})
 
     def save_checkpoint(self, path):
         torch.save({
@@ -95,17 +121,37 @@ class Trainer:
         metrics_acc = {}
         n_batches = 0
 
-        pbar = tqdm(loader, desc=f"Epoch {self.epoch}", leave=False)
-        for feats, boundaries, funcs, tokens in pbar:
+        use_amp = self.scaler is not None
+
+        n_total = min(len(loader), NUM_BATCHES_PER_EPOCH)
+        pbar = tqdm(total=n_total, desc=f"Epoch {self.epoch}", leave=False)
+        for i, (feats, boundaries, funcs, tokens) in enumerate(loader):
+            if i >= NUM_BATCHES_PER_EPOCH:
+                break
+
             feats = feats.to(self.device)
             boundaries = boundaries.to(self.device)
             funcs = funcs.to(self.device)
 
             self.optimizer.zero_grad()
-            out = self.model(feats)
-            loss, extras = self._compute_loss(out, boundaries, funcs, tokens)
-            loss.backward()
-            self.optimizer.step()
+            with torch.amp.autocast(device_type=self.device, enabled=use_amp):
+                out = self.model(feats)
+                loss, extras = self._compute_loss(out, boundaries, funcs, tokens)
+
+            if self.scaler is not None:
+                self.scaler.scale(loss).backward()
+                self.scaler.unscale_(self.optimizer)
+                self._last_grad_norm = torch.nn.utils.clip_grad_norm_(
+                    self.model.parameters(), MAX_GRAD_NORM
+                ).item()
+                self.scaler.step(self.optimizer)
+                self.scaler.update()
+            else:
+                loss.backward()
+                self._last_grad_norm = torch.nn.utils.clip_grad_norm_(
+                    self.model.parameters(), MAX_GRAD_NORM
+                ).item()
+                self.optimizer.step()
 
             for k, v in extras.items():
                 metrics_acc[k] = metrics_acc.get(k, 0) + v
@@ -113,8 +159,19 @@ class Trainer:
             n_batches += 1
 
             pbar.set_postfix({k: f"{v:.4f}" for k, v in extras.items()})
+            pbar.update(1)
 
+        pbar.close()
         return {k: v / n_batches for k, v in metrics_acc.items()}
+
+    def _log_histograms(self, epoch):
+        if self.writer is None:
+            return
+        for name, param in self.model.named_parameters():
+            if param.numel() < 100000 and param.ndim >= 2:
+                self.writer.add_histogram(f"weights/{name}", param, epoch)
+                if param.grad is not None:
+                    self.writer.add_histogram(f"gradients/{name}", param.grad, epoch)
 
     @torch.no_grad()
     def validate(self, loader):
@@ -133,11 +190,17 @@ class Trainer:
 
         return total_loss / n_batches
 
-    def fit(self, train_loader, val_loader, max_epochs=100):
-        for epoch in range(max_epochs):
+    def fit(self, train_loader, val_loader, max_epochs=100, ckpt_path=None):
+        start_epoch = self.epoch
+        for epoch in range(start_epoch, max_epochs):
             self.epoch = epoch
+            self._epoch_start = time.time()
             train_metrics = self.train_epoch(train_loader)
+            epoch_time = time.time() - self._epoch_start
+
+            val_start = time.time()
             val_loss = self.validate(val_loader)
+            val_time = time.time() - val_start
 
             self.train_losses.append(train_metrics["loss"])
             self.val_losses.append(val_loss)
@@ -145,19 +208,55 @@ class Trainer:
 
             lr = self.optimizer.param_groups[0]["lr"]
             info = " | ".join(f"{k}:{v:.4f}" for k, v in train_metrics.items())
-            print(f"Epoch {epoch:3d} | {info} | val: {val_loss:.4f} | lr: {lr:.2e}")
+            print(f"Epoch {epoch:3d} | {info} | val: {val_loss:.4f} | lr: {lr:.2e} | {epoch_time:.1f}s")
+
+            if self.writer:
+                self.writer.add_scalar("train/loss", train_metrics["loss"], epoch)
+                self.writer.add_scalar("train/boundary_loss", train_metrics.get("b", 0), epoch)
+                self.writer.add_scalar("train/function_loss", train_metrics.get("f", 0), epoch)
+                if "ctl" in train_metrics:
+                    self.writer.add_scalar("train/ctl_loss", train_metrics["ctl"], epoch)
+                self.writer.add_scalar("val/loss", val_loss, epoch)
+                self.writer.add_scalar("train/learning_rate", lr, epoch)
+                self.writer.add_scalar("train/grad_norm", self._last_grad_norm, epoch)
+                self.writer.add_scalar("train/epoch_time", epoch_time, epoch)
+                self.writer.add_scalar("val/epoch_time", val_time, epoch)
+                if epoch % 5 == 0:
+                    self._log_histograms(epoch)
+                mem_mb = 0
+                if self.device == "cuda" and torch.cuda.is_available():
+                    mem_mb = torch.cuda.memory_allocated() / 1024 / 1024
+                elif self.device == "mps" and torch.backends.mps.is_available():
+                    try:
+                        mem_mb = torch.mps.current_allocated_memory() / 1024 / 1024
+                    except Exception:
+                        pass
+                if mem_mb > 0 and self.writer:
+                    self.writer.add_scalar("system/device_allocated_mb", mem_mb, epoch)
+                self.writer.flush()
+
+            if self.device == "cuda" and torch.cuda.is_available():
+                torch.cuda.empty_cache()
+            elif self.device == "mps" and torch.backends.mps.is_available():
+                torch.mps.empty_cache()
 
             if val_loss < self.best_val_loss:
                 self.best_val_loss = val_loss
                 self.patience_counter = 0
-                ckpt_path = os.path.join(MODELS_DIR, "best_model.pt")
-                self.save_checkpoint(ckpt_path)
+                best_path = os.path.join(MODELS_DIR, "best_model.pt")
+                self.save_checkpoint(best_path)
             else:
                 self.patience_counter += 1
                 if self.patience_counter >= self.max_patience:
                     print(f"Early stopping at epoch {epoch}")
                     break
 
-        ckpt_path = os.path.join(MODELS_DIR, "final_model.pt")
-        self.save_checkpoint(ckpt_path)
+            if ckpt_path:
+                self.save_checkpoint(ckpt_path)
+
+        final_path = os.path.join(MODELS_DIR, "final_model.pt")
+        self.save_checkpoint(final_path)
+
+        if self.writer:
+            self.writer.close()
         return self.train_losses, self.val_losses

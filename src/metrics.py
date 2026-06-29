@@ -41,13 +41,12 @@ def compute_metrics(
     est_intervals = filter_intervals(est_intervals)
 
     # 1. HR.5F — boundary detection F-measure at 0.5s
+    hr_p = hr_r = hr5f = 0.0
     if len(ref_intervals) > 0 and len(est_intervals) > 0:
         hr_p, hr_r, hr_f = mir_eval.segment.detection(
             ref_intervals, est_intervals, window=0.5
         )
         hr5f = hr_f
-    else:
-        hr5f = 0.0
 
     # 2. ACC — frame-wise accuracy
     mask = (ref_frames != "?") & (est_frames != "?")
@@ -76,6 +75,7 @@ def compute_metrics(
         sf = 0.0
 
     # 5. CHR.5F — Chorus boundary detection
+    chr_p = chr_r = chr5f = 0.0
     chr_intervals_r = chorus_intervals(ref_segments)
     chr_intervals_e = chorus_intervals(est_segments)
     if len(chr_intervals_r) > 0 and len(chr_intervals_e) > 0:
@@ -83,8 +83,6 @@ def compute_metrics(
             chr_intervals_r, chr_intervals_e, window=0.5
         )
         chr5f = chr_f
-    else:
-        chr5f = 0.0
 
     # 6. CFI — Chorus vs non-chorus pairwise F
     ref_binary = make_chorus_binary(ref_segments, n_frames)
@@ -93,10 +91,14 @@ def compute_metrics(
 
     return {
         "HR.5F": round(hr5f, 3),
+        "HR.5F_P": round(hr_p, 3),
+        "HR.5F_R": round(hr_r, 3),
+        "CHR.5F": round(chr5f, 3),
+        "CHR.5F_P": round(chr_p, 3),
+        "CHR.5F_R": round(chr_r, 3),
         "ACC": round(acc, 3),
         "PWF": round(pwf, 3),
         "Sf": round(sf, 3),
-        "CHR.5F": round(chr5f, 3),
         "CFI": round(cfi, 3),
     }
 

@@ -1,4 +1,5 @@
 import os
+import functools
 import numpy as np
 import torch
 import torchaudio
@@ -14,6 +15,7 @@ FEATURES_DIR = os.path.join(HARMONIX_DIR, "features")
 
 os.makedirs(FEATURES_DIR, exist_ok=True)
 
+
 def load_audio(filepath: str) -> torch.Tensor:
     waveform, sr = torchaudio.load(filepath)
     if sr != SAMPLE_RATE:
@@ -22,6 +24,7 @@ def load_audio(filepath: str) -> torch.Tensor:
     if waveform.shape[0] > 1:
         waveform = waveform.mean(dim=0, keepdim=True)
     return waveform
+
 
 def compute_mel_spectrogram(waveform: torch.Tensor) -> torch.Tensor:
     mel_spec = torchaudio.transforms.MelSpectrogram(
@@ -36,17 +39,19 @@ def compute_mel_spectrogram(waveform: torch.Tensor) -> torch.Tensor:
     )
     spec = mel_spec(waveform)
     spec = torch.log(torch.clamp(spec, min=1e-10))
-    return spec  # (1, N_MELS, T_stft)
+    return spec
+
 
 def compute_harmonic_features(waveform: torch.Tensor) -> torch.Tensor:
     mel = compute_mel_spectrogram(waveform)
-    mel = mel.squeeze(0)  # (N_MELS, T_stft)
+    mel = mel.squeeze(0)
     T_stft = mel.shape[1]
     T_target = T_stft // TARGET_HOP
     T_target_floor = T_stft // TARGET_HOP
     mel = mel[:, :T_target_floor * TARGET_HOP]
     mel = mel.view(N_MELS, T_target, TARGET_HOP).mean(dim=2)
-    return mel  # (N_MELS, T_target)
+    return mel
+
 
 def precompute_features(song_ids: list[str], force: bool = False) -> dict[str, str]:
     paths = {}
@@ -64,6 +69,12 @@ def precompute_features(song_ids: list[str], force: bool = False) -> dict[str, s
         paths[sid] = out_path
     return paths
 
+
+@functools.lru_cache(maxsize=256)
+def _load_npy(path: str) -> np.ndarray:
+    return np.load(path)
+
+
 def load_features(sid: str) -> np.ndarray:
     path = os.path.join(FEATURES_DIR, f"{sid}.npy")
-    return np.load(path)
+    return _load_npy(path)
