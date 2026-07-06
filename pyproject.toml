@@ -1,0 +1,36 @@
+[project]
+name = "btu-rm-sose26"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = [
+  "ipykernel>=7.3.0",
+  "librosa>=0.11.0",
+  "matplotlib>=3.11.0",
+  "mir-eval>=0.8.0",
+  "numpy>=2.4.0",
+  "pandas>=3.0.0",
+  "torch>=2.11.0",
+  "torchaudio>=2.11.0",
+  "torchvision>=0.26.0",
+  "tqdm>=4.68.0",
+  "triton-xpu>=3.7.0 ; sys_platform == 'win32' or sys_platform == 'linux'",
+]
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-xpu", marker = "sys_platform == 'win32' or sys_platform == 'linux'" },
+]
+torchvision = [
+  { index = "pytorch-xpu", marker = "sys_platform == 'win32' or sys_platform == 'linux'" },
+]
+triton-xpu = [
+  { index = "pytorch-xpu", marker = "sys_platform == 'win32' or sys_platform == 'linux'" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-xpu"
+url = "https://download.pytorch.org/whl/xpu"
+explicit = true
