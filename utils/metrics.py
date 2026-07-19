@@ -5,6 +5,9 @@ import mir_eval
 from .label_conversion import CLASSES
 
 
+METRIC_KEYS = ["hr.5f", "acc", "pwf", "sf", "chr.5f", "cf1", "macro_f1"]
+
+
 def _to_intervals(boundaries_sec):
     """Convert boundary list to intervals array.
 
@@ -32,6 +35,32 @@ def _deduplicate_boundaries(boundaries, labels):
     return b, l
 
 
+def _chorus_intervals(intervals, labels):
+    """Filter intervals to only chorus-labeled segments.
+
+    Args:
+        intervals: (N, 2) array of [start, end]
+        labels: list of N str
+
+    Returns:
+        (M, 2) array of chorus intervals (M <= N)
+    """
+    mask = np.array([l == "chorus" for l in labels])
+    return intervals[mask]
+
+
+def _binary_labels(labels):
+    """Convert labels to binary chorus/non-chorus.
+
+    Args:
+        labels: list of str
+
+    Returns:
+        list of str — "chorus" or "non-chorus"
+    """
+    return ["chorus" if l == "chorus" else "non-chorus" for l in labels]
+
+
 def evaluate_song(boundaries_pred, labels_pred, boundaries_ref, labels_ref):
     """Compute all metrics for one song.
 
@@ -42,7 +71,7 @@ def evaluate_song(boundaries_pred, labels_pred, boundaries_ref, labels_ref):
         labels_ref: list of str — ground truth segment labels
 
     Returns:
-        dict with keys: hr.5f, pwf, sf, acc, macro_f1
+        dict with keys: hr.5f, acc, pwf, sf, chr.5f, cf1, macro_f1
     """
     boundaries_pred, labels_pred = _deduplicate_boundaries(boundaries_pred, labels_pred)
     boundaries_ref, labels_ref = _deduplicate_boundaries(boundaries_ref, labels_ref)
@@ -57,11 +86,37 @@ def evaluate_song(boundaries_pred, labels_pred, boundaries_ref, labels_ref):
     acc = _frame_accuracy(ref_intervals, labels_ref, est_intervals, labels_pred)
     mf1 = _macro_f1(ref_intervals, labels_ref, est_intervals, labels_pred, CLASSES)
 
+    # CHR.5F: boundary hit rate at 0.5s on chorus-only segments
+    ref_chorus = _chorus_intervals(ref_intervals, labels_ref)
+    est_chorus = _chorus_intervals(est_intervals, labels_pred)
+    if len(ref_chorus) > 0 and len(est_chorus) > 0:
+        _, _, chr5f = mir_eval.segment.detection(
+            ref_chorus, est_chorus, window=0.5,
+        )
+    else:
+        chr5f = 0.0
+
+    # CF1: pairwise frame F-measure on binary chorus/non-chorus labels
+    # Adjust intervals to match time ranges (mir_eval requires matching end times)
+    adj_ref_intervals, ref_labels_adj = mir_eval.util.adjust_intervals(
+        ref_intervals, labels=labels_ref, t_min=0.0,
+    )
+    adj_est_intervals, est_labels_adj = mir_eval.util.adjust_intervals(
+        est_intervals, labels=labels_pred, t_min=0.0, t_max=ref_intervals.max(),
+    )
+    ref_binary = _binary_labels(ref_labels_adj)
+    est_binary = _binary_labels(est_labels_adj)
+    _, _, cf1 = mir_eval.segment.pairwise(
+        adj_ref_intervals, ref_binary, adj_est_intervals, est_binary,
+    )
+
     return {
         "hr.5f": float(scores["F-measure@0.5"]),
         "pwf": float(scores["Pairwise F-measure"]),
         "sf": float(scores["V-measure"]),
         "acc": float(acc),
+        "chr.5f": float(chr5f),
+        "cf1": float(cf1),
         "macro_f1": float(mf1),
     }
 
@@ -145,7 +200,7 @@ def evaluate_all(boundaries_pred_list, labels_pred_list, boundaries_ref_list, la
             pass
 
     if not all_metrics:
-        return {k: 0.0 for k in ["hr.5f", "pwf", "sf", "acc"]}
+        return {k: 0.0 for k in METRIC_KEYS}
 
     keys = all_metrics[0].keys()
     return {k: float(np.mean([m[k] for m in all_metrics])) for k in keys}

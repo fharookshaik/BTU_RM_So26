@@ -1,192 +1,315 @@
-VARIENT A RESULTS
------------------
+#######################################
+SPECTNT BASELINE
+#######################################
 
-Fold 1 E1: 100%|██████████| 500/500 [13:57<00:00,  1.67s/it, loss=0.58] 
-  Val loss: 0.5864  (best: inf)
-  Checkpoint saved: ../checkpoints\spectnt_base_fold1.pt
-Fold 1 E2: 100%|██████████| 500/500 [12:35<00:00,  1.51s/it, loss=0.6]  
-  Val loss: 0.5425  (best: 0.5864)
-  Checkpoint saved: ../checkpoints\spectnt_base_fold1.pt
-Fold 1 E3: 100%|██████████| 500/500 [12:27<00:00,  1.49s/it, loss=0.509]
-  Val loss: 0.5306  (best: 0.5425)
-  Checkpoint saved: ../checkpoints\spectnt_base_fold1.pt
-Fold 1 E4: 100%|██████████| 500/500 [12:30<00:00,  1.50s/it, loss=0.497]
-  Val loss: 0.5106  (best: 0.5306)
-  Checkpoint saved: ../checkpoints\spectnt_base_fold1.pt
-Fold 1 E5: 100%|██████████| 500/500 [12:14<00:00,  1.47s/it, loss=0.467]
-  Val loss: 0.5201  (best: 0.5106)
-Fold 1 E6: 100%|██████████| 500/500 [12:10<00:00,  1.46s/it, loss=0.357]
-  Val loss: 0.5335  (best: 0.5106)
-  Early stopping at epoch 6
-Fold 1 done. Best val loss: 0.5106
-Fold 2 E1: 100%|██████████| 500/500 [12:11<00:00,  1.46s/it, loss=0.589]
-  Val loss: 0.5980  (best: inf)
-  Checkpoint saved: ../checkpoints\spectnt_base_fold2.pt
-Fold 2 E2: 100%|██████████| 500/500 [12:12<00:00,  1.47s/it, loss=0.477]
-  Val loss: 0.5438  (best: 0.5980)
-  Checkpoint saved: ../checkpoints\spectnt_base_fold2.pt
-Fold 2 E3: 100%|██████████| 500/500 [12:10<00:00,  1.46s/it, loss=0.492]
-  Val loss: 0.5499  (best: 0.5438)
-Fold 2 E4: 100%|██████████| 500/500 [12:11<00:00,  1.46s/it, loss=0.422]
-  Val loss: 0.5238  (best: 0.5438)
-  Checkpoint saved: ../checkpoints\spectnt_base_fold2.pt
-Fold 2 E5: 100%|██████████| 500/500 [12:11<00:00,  1.46s/it, loss=0.456]
-  Val loss: 0.5180  (best: 0.5238)
-  Checkpoint saved: ../checkpoints\spectnt_base_fold2.pt
-Fold 2 E6: 100%|██████████| 500/500 [12:12<00:00,  1.46s/it, loss=0.44] 
-  Val loss: 0.5368  (best: 0.5180)
-Fold 2 E7: 100%|██████████| 500/500 [12:12<00:00,  1.47s/it, loss=0.377]
-  Val loss: 0.5856  (best: 0.5180)
-  Early stopping at epoch 7
-Fold 2 done. Best val loss: 0.5180
-Fold 3 E1: 100%|██████████| 500/500 [12:15<00:00,  1.47s/it, loss=0.597]
-  Val loss: 0.5829  (best: inf)
-  Checkpoint saved: ../checkpoints\spectnt_base_fold3.pt
-Fold 3 E2: 100%|██████████| 500/500 [12:14<00:00,  1.47s/it, loss=0.534]
-  Val loss: 0.5389  (best: 0.5829)
-  Checkpoint saved: ../checkpoints\spectnt_base_fold3.pt
-Fold 3 E3: 100%|██████████| 500/500 [12:09<00:00,  1.46s/it, loss=0.442]
-  Val loss: 0.5316  (best: 0.5389)
-  Checkpoint saved: ../checkpoints\spectnt_base_fold3.pt
-Fold 3 E4: 100%|██████████| 500/500 [12:11<00:00,  1.46s/it, loss=0.458]
-  Val loss: 0.5253  (best: 0.5316)
-  Checkpoint saved: ../checkpoints\spectnt_base_fold3.pt
-Fold 3 E5: 100%|██████████| 500/500 [12:13<00:00,  1.47s/it, loss=0.431]
-  Val loss: 0.5193  (best: 0.5253)
-  Checkpoint saved: ../checkpoints\spectnt_base_fold3.pt
-Fold 3 E6: 100%|██████████| 500/500 [12:12<00:00,  1.47s/it, loss=0.416]
-  Val loss: 0.5392  (best: 0.5193)
-Fold 3 E7: 100%|██████████| 500/500 [12:10<00:00,  1.46s/it, loss=0.378]
-  Val loss: 0.5690  (best: 0.5193)
-  Early stopping at epoch 7
-Fold 3 done. Best val loss: 0.5193
-Fold 4 E1: 100%|██████████| 500/500 [12:16<00:00,  1.47s/it, loss=0.546]
-  Val loss: 0.5779  (best: inf)
-  Checkpoint saved: ../checkpoints\spectnt_base_fold4.pt
-Fold 4 E2: 100%|██████████| 500/500 [12:15<00:00,  1.47s/it, loss=0.519]
-  Val loss: 0.5490  (best: 0.5779)
-  Checkpoint saved: ../checkpoints\spectnt_base_fold4.pt
-Fold 4 E3: 100%|██████████| 500/500 [12:15<00:00,  1.47s/it, loss=0.492]
-  Val loss: 0.5249  (best: 0.5490)
-  Checkpoint saved: ../checkpoints\spectnt_base_fold4.pt
-Fold 4 E4: 100%|██████████| 500/500 [12:15<00:00,  1.47s/it, loss=0.473]
-  Val loss: 0.5290  (best: 0.5249)
-Fold 4 E5: 100%|██████████| 500/500 [12:17<00:00,  1.48s/it, loss=0.448]
-  Val loss: 0.5274  (best: 0.5249)
-  Early stopping at epoch 5
-Fold 4 done. Best val loss: 0.5249
-
-
-
-
-VARIANT B - RESULTS
--------------------
-
-
-Fold 1 E1: 100%|██████████| 500/500 [13:08<00:00,  1.58s/it, loss=0.787]
-  Val loss: 0.7960  (best: inf)
-  Checkpoint saved: ../checkpoints\spectnt_ctl_fold1.pt
-Fold 1 E2: 100%|██████████| 500/500 [12:23<00:00,  1.49s/it, loss=0.686]
-  Val loss: 0.7201  (best: 0.7960)
-  Checkpoint saved: ../checkpoints\spectnt_ctl_fold1.pt
-Fold 1 E3: 100%|██████████| 500/500 [12:14<00:00,  1.47s/it, loss=0.684]
-  Val loss: 0.7108  (best: 0.7201)
-  Checkpoint saved: ../checkpoints\spectnt_ctl_fold1.pt
-Fold 1 E4: 100%|██████████| 500/500 [12:17<00:00,  1.47s/it, loss=0.674]
-  Val loss: 0.6976  (best: 0.7108)
-  Checkpoint saved: ../checkpoints\spectnt_ctl_fold1.pt
-Fold 1 E5: 100%|██████████| 500/500 [12:17<00:00,  1.47s/it, loss=0.65] 
-  Val loss: 0.6903  (best: 0.6976)
-  Checkpoint saved: ../checkpoints\spectnt_ctl_fold1.pt
-Fold 1 E6: 100%|██████████| 500/500 [12:15<00:00,  1.47s/it, loss=0.552]
-  Val loss: 0.7090  (best: 0.6903)
-Fold 1 E7: 100%|██████████| 500/500 [12:15<00:00,  1.47s/it, loss=0.574]
-  Val loss: 0.7083  (best: 0.6903)
-  Early stopping at epoch 7
-Fold 1 done. Best val loss: 0.6903
-Fold 2 E1: 100%|██████████| 500/500 [12:18<00:00,  1.48s/it, loss=0.779]
-  Val loss: 0.7486  (best: inf)
-  Checkpoint saved: ../checkpoints\spectnt_ctl_fold2.pt
-Fold 2 E2: 100%|██████████| 500/500 [12:17<00:00,  1.48s/it, loss=0.725]
-  Val loss: 0.7221  (best: 0.7486)
-  Checkpoint saved: ../checkpoints\spectnt_ctl_fold2.pt
-Fold 2 E3: 100%|██████████| 500/500 [12:12<00:00,  1.47s/it, loss=0.645]
-  Val loss: 0.7157  (best: 0.7221)
-  Checkpoint saved: ../checkpoints\spectnt_ctl_fold2.pt
-Fold 2 E4: 100%|██████████| 500/500 [12:12<00:00,  1.47s/it, loss=0.638]
-  Val loss: 0.7115  (best: 0.7157)
-  Checkpoint saved: ../checkpoints\spectnt_ctl_fold2.pt
-Fold 2 E5: 100%|██████████| 500/500 [12:12<00:00,  1.47s/it, loss=0.618]
-  Val loss: 0.6930  (best: 0.7115)
-  Checkpoint saved: ../checkpoints\spectnt_ctl_fold2.pt
-Fold 2 E6: 100%|██████████| 500/500 [12:12<00:00,  1.46s/it, loss=0.666]
-  Val loss: 0.7019  (best: 0.6930)
-Fold 2 E7: 100%|██████████| 500/500 [12:13<00:00,  1.47s/it, loss=0.589]
-  Val loss: 0.7213  (best: 0.6930)
-  Early stopping at epoch 7
-Fold 2 done. Best val loss: 0.6930
-Fold 3 E1: 100%|██████████| 500/500 [12:12<00:00,  1.47s/it, loss=0.764]
-  Val loss: 0.7889  (best: inf)
-  Checkpoint saved: ../checkpoints\spectnt_ctl_fold3.pt
-Fold 3 E2: 100%|██████████| 500/500 [12:15<00:00,  1.47s/it, loss=0.688]
-  Val loss: 0.7412  (best: 0.7889)
-  Checkpoint saved: ../checkpoints\spectnt_ctl_fold3.pt
-Fold 3 E3: 100%|██████████| 500/500 [12:13<00:00,  1.47s/it, loss=0.638]
-  Val loss: 0.7084  (best: 0.7412)
-  Checkpoint saved: ../checkpoints\spectnt_ctl_fold3.pt
-Fold 3 E4: 100%|██████████| 500/500 [12:10<00:00,  1.46s/it, loss=0.608]
-  Val loss: 0.7146  (best: 0.7084)
-Fold 3 E5: 100%|██████████| 500/500 [12:12<00:00,  1.46s/it, loss=0.662]
-  Val loss: 0.7125  (best: 0.7084)
-  Early stopping at epoch 5
-Fold 3 done. Best val loss: 0.7084
-Fold 4 E1: 100%|██████████| 500/500 [12:13<00:00,  1.47s/it, loss=0.795]
-  Val loss: 0.8533  (best: inf)
-  Checkpoint saved: ../checkpoints\spectnt_ctl_fold4.pt
-Fold 4 E2: 100%|██████████| 500/500 [12:13<00:00,  1.47s/it, loss=0.751]
-  Val loss: 0.7282  (best: 0.8533)
-  Checkpoint saved: ../checkpoints\spectnt_ctl_fold4.pt
-Fold 4 E3: 100%|██████████| 500/500 [12:11<00:00,  1.46s/it, loss=0.697]
-  Val loss: 0.7090  (best: 0.7282)
-  Checkpoint saved: ../checkpoints\spectnt_ctl_fold4.pt
-Fold 4 E4: 100%|██████████| 500/500 [12:12<00:00,  1.46s/it, loss=0.697]
-  Val loss: 0.7003  (best: 0.7090)
-  Checkpoint saved: ../checkpoints\spectnt_ctl_fold4.pt
-Fold 4 E5: 100%|██████████| 500/500 [12:15<00:00,  1.47s/it, loss=0.677]
-  Val loss: 0.7053  (best: 0.7003)
-Fold 4 E6: 100%|██████████| 500/500 [12:12<00:00,  1.47s/it, loss=0.606]
-  Val loss: 0.7123  (best: 0.7003)
-  Early stopping at epoch 6
-Fold 4 done. Best val loss: 0.7003
+Fold 1 E1:   0%|          | 0/500 [00:00<?, ?it/s]W0717 16:54:55.569000 64338 .venv/lib/python3.12/site-packages/torch/_inductor/utils.py:1731] [0/0] Not enough SMs to use max_autotune_gemm mode
+Fold 1 E1: 100%|██████████| 500/500 [06:22<00:00,  1.31it/s, loss=0.698]
+  Val loss: 0.7338  (best: inf)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold1.pt
+Fold 1 E2: 100%|██████████| 500/500 [05:51<00:00,  1.42it/s, loss=0.553]
+  Val loss: 0.5795  (best: 0.7338)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold1.pt
+Fold 1 E3: 100%|██████████| 500/500 [05:53<00:00,  1.41it/s, loss=0.556]
+  Val loss: 0.5555  (best: 0.5795)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold1.pt
+Fold 1 E4: 100%|██████████| 500/500 [05:54<00:00,  1.41it/s, loss=0.583]
+  Val loss: 0.5436  (best: 0.5555)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold1.pt
+Fold 1 E5: 100%|██████████| 500/500 [05:54<00:00,  1.41it/s, loss=0.48] 
+  Val loss: 0.5334  (best: 0.5436)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold1.pt
+Fold 1 E6: 100%|██████████| 500/500 [05:54<00:00,  1.41it/s, loss=0.475]
+  Val loss: 0.5333  (best: 0.5334)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold1.pt
+Fold 1 E7: 100%|██████████| 500/500 [05:53<00:00,  1.41it/s, loss=0.435]
+  Val loss: 0.5252  (best: 0.5333)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold1.pt
+Fold 1 E8: 100%|██████████| 500/500 [05:52<00:00,  1.42it/s, loss=0.444]
+  Val loss: 0.5208  (best: 0.5252)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold1.pt
+Fold 1 E9: 100%|██████████| 500/500 [05:51<00:00,  1.42it/s, loss=0.437]
+  Val loss: 0.5246  (best: 0.5208)
+Fold 1 E10: 100%|██████████| 500/500 [05:52<00:00,  1.42it/s, loss=0.425]
+  Val loss: 0.5148  (best: 0.5208)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold1.pt
+Fold 1 E11: 100%|██████████| 500/500 [05:51<00:00,  1.42it/s, loss=0.373]
+  Val loss: 0.5229  (best: 0.5148)
+Fold 1 E12: 100%|██████████| 500/500 [05:50<00:00,  1.43it/s, loss=0.424]
+  Val loss: 0.5286  (best: 0.5148)
+  Early stopping at epoch 12
+Fold 1 done. Best val loss: 0.5148
+Fold 2 E1: 100%|██████████| 500/500 [05:50<00:00,  1.43it/s, loss=0.766]
+  Val loss: 0.8209  (best: inf)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold2.pt
+Fold 2 E2: 100%|██████████| 500/500 [05:49<00:00,  1.43it/s, loss=0.478]
+  Val loss: 0.5893  (best: 0.8209)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold2.pt
+Fold 2 E3: 100%|██████████| 500/500 [05:49<00:00,  1.43it/s, loss=0.555]
+  Val loss: 0.5520  (best: 0.5893)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold2.pt
+Fold 2 E4: 100%|██████████| 500/500 [05:50<00:00,  1.43it/s, loss=0.526]
+  Val loss: 0.5397  (best: 0.5520)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold2.pt
+Fold 2 E5: 100%|██████████| 500/500 [05:50<00:00,  1.43it/s, loss=0.566]
+  Val loss: 0.5378  (best: 0.5397)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold2.pt
+Fold 2 E6: 100%|██████████| 500/500 [05:51<00:00,  1.42it/s, loss=0.49] 
+  Val loss: 0.5265  (best: 0.5378)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold2.pt
+Fold 2 E7: 100%|██████████| 500/500 [05:50<00:00,  1.43it/s, loss=0.446]
+  Val loss: 0.5199  (best: 0.5265)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold2.pt
+Fold 2 E8: 100%|██████████| 500/500 [05:50<00:00,  1.43it/s, loss=0.547]
+  Val loss: 0.5157  (best: 0.5199)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold2.pt
+Fold 2 E9: 100%|██████████| 500/500 [07:18<00:00,  1.14it/s, loss=0.404]
+  Val loss: 0.5188  (best: 0.5157)
+Fold 2 E10: 100%|██████████| 500/500 [02:45<00:00,  3.01it/s, loss=0.463]
+  Val loss: 0.5181  (best: 0.5157)
+  Early stopping at epoch 10
+Fold 2 done. Best val loss: 0.5157
+Fold 3 E1: 100%|██████████| 500/500 [01:56<00:00,  4.30it/s, loss=1.4]  
+  Val loss: 1.4125  (best: inf)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold3.pt
+Fold 3 E2: 100%|██████████| 500/500 [01:55<00:00,  4.31it/s, loss=0.651]
+  Val loss: 0.5843  (best: 1.4125)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold3.pt
+Fold 3 E3: 100%|██████████| 500/500 [01:55<00:00,  4.31it/s, loss=0.532]
+  Val loss: 0.5921  (best: 0.5843)
+Fold 3 E4: 100%|██████████| 500/500 [01:56<00:00,  4.30it/s, loss=0.585]
+  Val loss: 0.5476  (best: 0.5843)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold3.pt
+Fold 3 E5: 100%|██████████| 500/500 [01:55<00:00,  4.32it/s, loss=0.512]
+  Val loss: 0.5431  (best: 0.5476)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold3.pt
+Fold 3 E6: 100%|██████████| 500/500 [01:55<00:00,  4.32it/s, loss=0.465]
+  Val loss: 0.5352  (best: 0.5431)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold3.pt
+Fold 3 E7: 100%|██████████| 500/500 [01:55<00:00,  4.32it/s, loss=0.487]
+  Val loss: 0.5287  (best: 0.5352)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold3.pt
+Fold 3 E8: 100%|██████████| 500/500 [01:55<00:00,  4.31it/s, loss=0.448]
+  Val loss: 0.5297  (best: 0.5287)
+Fold 3 E9: 100%|██████████| 500/500 [01:55<00:00,  4.32it/s, loss=0.442]
+  Val loss: 0.5393  (best: 0.5287)
+  Early stopping at epoch 9
+Fold 3 done. Best val loss: 0.5287
+Fold 4 E1: 100%|██████████| 500/500 [01:55<00:00,  4.34it/s, loss=0.647]
+  Val loss: 0.6890  (best: inf)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold4.pt
+Fold 4 E2: 100%|██████████| 500/500 [01:55<00:00,  4.34it/s, loss=0.65] 
+  Val loss: 0.5956  (best: 0.6890)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold4.pt
+Fold 4 E3: 100%|██████████| 500/500 [01:55<00:00,  4.32it/s, loss=0.554]
+  Val loss: 0.5609  (best: 0.5956)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold4.pt
+Fold 4 E4: 100%|██████████| 500/500 [01:55<00:00,  4.32it/s, loss=0.446]
+  Val loss: 0.5384  (best: 0.5609)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold4.pt
+Fold 4 E5: 100%|██████████| 500/500 [01:55<00:00,  4.33it/s, loss=0.541]
+  Val loss: 0.5358  (best: 0.5384)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold4.pt
+Fold 4 E6: 100%|██████████| 500/500 [01:55<00:00,  4.34it/s, loss=0.478]
+  Val loss: 0.5336  (best: 0.5358)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold4.pt
+Fold 4 E7: 100%|██████████| 500/500 [01:55<00:00,  4.32it/s, loss=0.467]
+  Val loss: 0.5268  (best: 0.5336)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold4.pt
+Fold 4 E8: 100%|██████████| 500/500 [01:55<00:00,  4.32it/s, loss=0.485]
+  Val loss: 0.5266  (best: 0.5268)
+  Checkpoint saved: ../checkpoints/spectnt_base_fold4.pt
+Fold 4 E9: 100%|██████████| 500/500 [01:55<00:00,  4.32it/s, loss=0.5]  
+  Val loss: 0.5329  (best: 0.5266)
+Fold 4 E10: 100%|██████████| 500/500 [01:55<00:00,  4.32it/s, loss=0.45] 
+  Val loss: 0.5295  (best: 0.5266)
+  Early stopping at epoch 10
+Fold 4 done. Best val loss: 0.5266
 
 
 
-Evaluation
-----------
+#######################################
+SPECTNT CTL
+#######################################
 
 
-=== SpecTNT (no CTL) ===
-Fold 1: loaded checkpoint (epoch 3, val_loss=0.5106)
-  Evaluating fold 1: 100%|██████████| 228/228 [02:45<00:00,  1.38it/s]
-Fold 2: loaded checkpoint (epoch 4, val_loss=0.5180)
-  Evaluating fold 2: 100%|██████████| 228/228 [02:30<00:00,  1.51it/s]
-Fold 3: loaded checkpoint (epoch 4, val_loss=0.5193)
-  Evaluating fold 3: 100%|██████████| 228/228 [03:01<00:00,  1.25it/s]
-Fold 4: loaded checkpoint (epoch 2, val_loss=0.5249)
-  Evaluating fold 4: 100%|██████████| 228/228 [02:28<00:00,  1.53it/s]
-  hr.5f: 0.2812
-  pwf: 0.4923
-  sf: 0.0534
-  acc: 0.3947
+Fold 1 E1: 100%|██████████| 500/500 [01:58<00:00,  4.21it/s, loss=1.08] 
+  Val loss: 1.0057  (best: inf)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold1.pt
+Fold 1 E2: 100%|██████████| 500/500 [01:56<00:00,  4.31it/s, loss=0.874]
+  Val loss: 0.8308  (best: 1.0057)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold1.pt
+Fold 1 E3: 100%|██████████| 500/500 [01:55<00:00,  4.31it/s, loss=0.827]
+  Val loss: 0.7780  (best: 0.8308)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold1.pt
+Fold 1 E4: 100%|██████████| 500/500 [01:55<00:00,  4.31it/s, loss=0.681]
+  Val loss: 0.7335  (best: 0.7780)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold1.pt
+Fold 1 E5: 100%|██████████| 500/500 [01:55<00:00,  4.31it/s, loss=0.818]
+  Val loss: 0.7115  (best: 0.7335)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold1.pt
+Fold 1 E6: 100%|██████████| 500/500 [01:56<00:00,  4.31it/s, loss=0.76] 
+  Val loss: 0.7110  (best: 0.7115)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold1.pt
+Fold 1 E7: 100%|██████████| 500/500 [01:56<00:00,  4.31it/s, loss=0.676]
+  Val loss: 0.7056  (best: 0.7110)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold1.pt
+Fold 1 E8: 100%|██████████| 500/500 [01:55<00:00,  4.31it/s, loss=0.643]
+  Val loss: 0.6958  (best: 0.7056)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold1.pt
+Fold 1 E9: 100%|██████████| 500/500 [01:56<00:00,  4.31it/s, loss=0.651]
+  Val loss: 0.6909  (best: 0.6958)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold1.pt
+Fold 1 E10: 100%|██████████| 500/500 [01:56<00:00,  4.31it/s, loss=0.721]
+  Val loss: 0.6981  (best: 0.6909)
+Fold 1 E11: 100%|██████████| 500/500 [01:56<00:00,  4.31it/s, loss=0.76] 
+  Val loss: 0.6959  (best: 0.6909)
+  Early stopping at epoch 11
+Fold 1 done. Best val loss: 0.6909
+Fold 2 E1: 100%|██████████| 500/500 [01:56<00:00,  4.31it/s, loss=1.39] 
+  Val loss: 1.5075  (best: inf)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold2.pt
+Fold 2 E2: 100%|██████████| 500/500 [01:55<00:00,  4.32it/s, loss=0.737]
+  Val loss: 0.7912  (best: 1.5075)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold2.pt
+Fold 2 E3: 100%|██████████| 500/500 [01:55<00:00,  4.32it/s, loss=0.764]
+  Val loss: 0.7402  (best: 0.7912)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold2.pt
+Fold 2 E4: 100%|██████████| 500/500 [01:55<00:00,  4.32it/s, loss=0.777]
+  Val loss: 0.7222  (best: 0.7402)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold2.pt
+Fold 2 E5: 100%|██████████| 500/500 [01:55<00:00,  4.32it/s, loss=0.753]
+  Val loss: 0.7184  (best: 0.7222)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold2.pt
+Fold 2 E6: 100%|██████████| 500/500 [01:55<00:00,  4.32it/s, loss=0.769]
+  Val loss: 0.7145  (best: 0.7184)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold2.pt
+Fold 2 E7: 100%|██████████| 500/500 [01:55<00:00,  4.32it/s, loss=0.625]
+  Val loss: 0.7043  (best: 0.7145)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold2.pt
+Fold 2 E8: 100%|██████████| 500/500 [01:55<00:00,  4.32it/s, loss=0.619]
+  Val loss: 0.7042  (best: 0.7043)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold2.pt
+Fold 2 E9: 100%|██████████| 500/500 [01:55<00:00,  4.32it/s, loss=0.638]
+  Val loss: 0.7059  (best: 0.7042)
+Fold 2 E10: 100%|██████████| 500/500 [01:55<00:00,  4.32it/s, loss=0.637]
+  Val loss: 0.7044  (best: 0.7042)
+  Early stopping at epoch 10
+Fold 2 done. Best val loss: 0.7042
+Fold 3 E1: 100%|██████████| 500/500 [01:56<00:00,  4.31it/s, loss=0.947]
+  Val loss: 1.0154  (best: inf)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold3.pt
+Fold 3 E2: 100%|██████████| 500/500 [01:55<00:00,  4.32it/s, loss=0.663]
+  Val loss: 0.7714  (best: 1.0154)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold3.pt
+Fold 3 E3: 100%|██████████| 500/500 [01:55<00:00,  4.31it/s, loss=0.731]
+  Val loss: 0.7478  (best: 0.7714)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold3.pt
+Fold 3 E4: 100%|██████████| 500/500 [01:55<00:00,  4.32it/s, loss=0.77] 
+  Val loss: 0.7377  (best: 0.7478)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold3.pt
+Fold 3 E5: 100%|██████████| 500/500 [01:55<00:00,  4.32it/s, loss=0.719]
+  Val loss: 0.7258  (best: 0.7377)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold3.pt
+Fold 3 E6: 100%|██████████| 500/500 [01:55<00:00,  4.31it/s, loss=0.639]
+  Val loss: 0.7111  (best: 0.7258)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold3.pt
+Fold 3 E7: 100%|██████████| 500/500 [01:56<00:00,  4.31it/s, loss=0.524]
+  Val loss: 0.7114  (best: 0.7111)
+Fold 3 E8: 100%|██████████| 500/500 [01:55<00:00,  4.31it/s, loss=0.797]
+  Val loss: 0.7081  (best: 0.7111)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold3.pt
+Fold 3 E9: 100%|██████████| 500/500 [01:55<00:00,  4.31it/s, loss=0.624]
+  Val loss: 0.7013  (best: 0.7081)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold3.pt
+Fold 3 E10: 100%|██████████| 500/500 [01:56<00:00,  4.28it/s, loss=0.655]
+  Val loss: 0.6945  (best: 0.7013)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold3.pt
+Fold 3 E11: 100%|██████████| 500/500 [01:57<00:00,  4.27it/s, loss=0.62] 
+  Val loss: 0.7096  (best: 0.6945)
+Fold 3 E12: 100%|██████████| 500/500 [01:57<00:00,  4.27it/s, loss=0.673]
+  Val loss: 0.7012  (best: 0.6945)
+  Early stopping at epoch 12
+Fold 3 done. Best val loss: 0.6945
+Fold 4 E1: 100%|██████████| 500/500 [01:57<00:00,  4.26it/s, loss=0.956]
+  Val loss: 0.9242  (best: inf)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold4.pt
+Fold 4 E2: 100%|██████████| 500/500 [01:57<00:00,  4.27it/s, loss=0.772]
+  Val loss: 0.7881  (best: 0.9242)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold4.pt
+Fold 4 E3: 100%|██████████| 500/500 [01:57<00:00,  4.27it/s, loss=0.73] 
+  Val loss: 0.7473  (best: 0.7881)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold4.pt
+Fold 4 E4: 100%|██████████| 500/500 [01:56<00:00,  4.28it/s, loss=0.701]
+  Val loss: 0.7316  (best: 0.7473)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold4.pt
+Fold 4 E5: 100%|██████████| 500/500 [01:56<00:00,  4.27it/s, loss=0.719]
+  Val loss: 0.7270  (best: 0.7316)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold4.pt
+Fold 4 E6: 100%|██████████| 500/500 [01:57<00:00,  4.27it/s, loss=0.771]
+  Val loss: 0.7156  (best: 0.7270)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold4.pt
+Fold 4 E7: 100%|██████████| 500/500 [01:57<00:00,  4.27it/s, loss=0.689]
+  Val loss: 0.7092  (best: 0.7156)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold4.pt
+Fold 4 E8: 100%|██████████| 500/500 [01:57<00:00,  4.27it/s, loss=0.606]
+  Val loss: 0.7065  (best: 0.7092)
+  Checkpoint saved: ../checkpoints/spectnt_ctl_fold4.pt
+Fold 4 E9: 100%|██████████| 500/500 [01:56<00:00,  4.28it/s, loss=0.725]
+  Val loss: 0.7097  (best: 0.7065)
+Fold 4 E10: 100%|██████████| 500/500 [01:56<00:00,  4.27it/s, loss=0.551]
+  Val loss: 0.7133  (best: 0.7065)
+  Early stopping at epoch 10
+Fold 4 done. Best val loss: 0.7065
 
-=== SpecTNT (with CTL) ===
-Fold 1: loaded checkpoint (epoch 4, val_loss=0.6903)
-  Evaluating fold 1: 100%|██████████| 228/228 [02:39<00:00,  1.43it/s]
-Fold 2: loaded checkpoint (epoch 4, val_loss=0.6930)
-  Evaluating fold 2:  85%|████████▍ | 193/228 [02:23<00:21,  1.66it/s]
-Fold 4: loaded checkpoint (epoch 3, val_loss=0.7003)
-  Evaluating fold 4: 100%|██████████| 228/228 [02:26<00:00,  1.56it/s]
-  hr.5f: 0.2762
-  pwf: 0.4859
-  sf: 0.0950
-  acc: 0.3936
+
+
+
+
+# RESULTS
+
+\n==================================================
+=== base baseline vs. smoothed ===
+Fold 1: loaded checkpoint (epoch 9, val_loss=0.5148)
+  Evaluating fold 1: 100%|██████████| 228/228 [01:32<00:00,  2.47it/s]
+Fold 2: loaded checkpoint (epoch 7, val_loss=0.5157)
+  Evaluating fold 2: 100%|██████████| 228/228 [01:22<00:00,  2.76it/s]
+Fold 3: loaded checkpoint (epoch 6, val_loss=0.5287)
+  Evaluating fold 3: 100%|██████████| 228/228 [01:32<00:00,  2.48it/s]
+Fold 4: loaded checkpoint (epoch 7, val_loss=0.5266)
+  Evaluating fold 4: 100%|██████████| 228/228 [01:27<00:00,  2.59it/s]
+  Smoothed fold 1: 100%|██████████| 228/228 [01:17<00:00,  2.94it/s]
+  Smoothed fold 2: 100%|██████████| 228/228 [01:11<00:00,  3.19it/s]
+  Smoothed fold 3: 100%|██████████| 228/228 [01:26<00:00,  2.64it/s]
+  Smoothed fold 4: 100%|██████████| 228/228 [01:04<00:00,  3.53it/s]
+  Metric       Baseline   Smoothed   Change    
+  ------------------------------------------
+  hr.5f        0.2767     0.2767     +0.0000   
+  pwf          0.5544     0.5491     -0.0053   
+  sf           0.2325     0.2082     -0.0243   
+  acc          0.4932     0.4896     -0.0036   
+  chr.5f       0.1576     0.1518     -0.0058   
+  cf1          0.6805     0.6795     -0.0009   
+  macro_f1     0.1497     0.1420     -0.0077   
+\n==================================================
+=== ctl baseline vs. smoothed ===
+Fold 1: loaded checkpoint (epoch 8, val_loss=0.6909)
+  Evaluating fold 1: 100%|██████████| 228/228 [00:58<00:00,  3.88it/s]
+Fold 2: loaded checkpoint (epoch 7, val_loss=0.7042)
+  Evaluating fold 2: 100%|██████████| 228/228 [00:57<00:00,  3.98it/s]
+Fold 3: loaded checkpoint (epoch 9, val_loss=0.6945)
+  Evaluating fold 3: 100%|██████████| 228/228 [00:56<00:00,  4.03it/s]
+Fold 4: loaded checkpoint (epoch 7, val_loss=0.7065)
+  Evaluating fold 4: 100%|██████████| 228/228 [00:58<00:00,  3.90it/s]
+  Smoothed fold 1: 100%|██████████| 228/228 [01:01<00:00,  3.68it/s]
+  Smoothed fold 2: 100%|██████████| 228/228 [00:59<00:00,  3.81it/s]
+  Smoothed fold 3: 100%|██████████| 228/228 [00:57<00:00,  3.96it/s]
+  Smoothed fold 4: 100%|██████████| 228/228 [00:59<00:00,  3.84it/s]
+  Metric       Baseline   Smoothed   Change    
+  ------------------------------------------
+  hr.5f        0.2748     0.2748     +0.0000   
+  pwf          0.5344     0.5212     -0.0131   
+  sf           0.1970     0.1674     -0.0295   
+  acc          0.4577     0.4580     +0.0004   
+  chr.5f       0.1604     0.1560     -0.0044   
+  cf1          0.6574     0.6515     -0.0059   
+  macro_f1     0.1422     0.1352     -0.0070   

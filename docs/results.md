@@ -4,7 +4,7 @@
 **Data:** 912 songs from HarmonixSet, 4-fold cross-validation
 **Training:** batch=32, grad_accum=4 (effective 128), max 100 epochs,
 cosine LR schedule, patience=2, gradient clip norm=5.0
-**Hardware:** Intel Arc 140V (XPU, 8GB VRAM), ~12–14 min/epoch
+**Hardware:** NVIDIA RTX 2000 Ada (CUDA, 8GB VRAM)
 
 ---
 
@@ -34,14 +34,17 @@ cosine LR schedule, patience=2, gradient clip norm=5.0
 
 ## 2. Evaluation — 4-Fold Cross-Validation
 
-### 2.1 Variant Comparison
+### 2.1 Variant Comparison (All 6 Metrics)
 
 | Metric | Variant A (No CTL) | Variant B (With CTL) | Δ |
 |--------|:------------------:|:--------------------:|:-:|
-| HR@0.5 ↑ | **0.2812** | 0.2762 | −0.0050 |
+| HR@0.5 ↑ | **0.2813** | 0.2763 | −0.0049 |
+| ACC ↑ | **0.3948** | 0.3937 | −0.0011 |
 | PWF ↑ | **0.4923** | 0.4859 | −0.0064 |
-| SF ↑ | 0.0534 | **0.0950** | **+0.0416** |
-| Accuracy ↑ | **0.3947** | 0.3936 | −0.0011 |
+| Sf ↑ | 0.0536 | **0.0952** | **+0.0416** |
+| CHR@0.5 ↑ | **0.1703** | 0.1620 | −0.0083 |
+| CF1 ↑ | **0.7035** | 0.6775 | −0.0259 |
+| Macro F1 ↑ | 0.0904 | **0.1172** | **+0.0268** |
 
 ### 2.2 Effect of Viterbi Smoothing
 
@@ -49,19 +52,25 @@ cosine LR schedule, patience=2, gradient clip norm=5.0
 
 | Metric | Baseline | Smoothed | Δ |
 |--------|:--------:|:---------:|:-:|
-| HR@0.5 | 0.2812 | 0.2812 | 0.0000 |
-| PWF | **0.4923** | 0.4929 | +0.0006 |
-| SF | 0.0534 | **0.0754** | **+0.0220** |
-| Acc | **0.3947** | 0.3938 | −0.0009 |
+| HR@0.5 | 0.2813 | 0.2813 | 0.0000 |
+| ACC | **0.3948** | 0.3939 | −0.0009 |
+| PWF | 0.4923 | **0.4929** | **+0.0006** |
+| Sf | 0.0536 | **0.0756** | **+0.0220** |
+| CHR@0.5 | 0.1703 | **0.1708** | **+0.0005** |
+| CF1 | **0.7035** | 0.6939 | −0.0096 |
+| Macro F1 | 0.0904 | **0.0955** | **+0.0051** |
 
 **Variant B (With CTL):**
 
 | Metric | Baseline | Smoothed | Δ |
 |--------|:--------:|:---------:|:-:|
-| HR@0.5 | 0.2762 | 0.2762 | 0.0000 |
-| PWF | **0.4859** | 0.4719 | −0.0139 |
-| SF | **0.0950** | 0.0897 | −0.0054 |
-| Acc | **0.3936** | 0.3860 | −0.0077 |
+| HR@0.5 | 0.2763 | 0.2763 | 0.0000 |
+| ACC | **0.3937** | 0.3859 | −0.0078 |
+| PWF | **0.4859** | 0.4720 | −0.0139 |
+| Sf | **0.0952** | 0.0898 | −0.0054 |
+| CHR@0.5 | **0.1620** | 0.1616 | −0.0004 |
+| CF1 | **0.6775** | 0.6487 | −0.0288 |
+| Macro F1 | **0.1172** | 0.1073 | −0.0099 |
 
 ---
 
@@ -82,8 +91,8 @@ Predicted: 17 segments, 8.5s median duration (2.4× over-segmentation)
 
 ## 4. Summary of Findings
 
-- CTL improves SF by 78% relative (+0.0416) but slightly hurts HR@0.5 and PWF
-- Base model converges to lower validation loss (0.5182 vs 0.6980) — CTL adds a harder auxiliary task
-- Viterbi smoothing benefits Variant A (SF +0.0220) but degrades Variant B across non-boundary metrics
-- Accuracy is similar across variants (~39.4%) and weakly affected by smoothing
-- Both variants over-segment (~2.4×) and rarely predict minority functional classes (Macro F1 = 0.08)
+- CTL improves Sf by 78% relative (+0.0416) and Macro F1 by 30% (+0.0268), but slightly hurts boundary metrics (HR@0.5, CHR@0.5) and pairwise metrics (PWF, CF1)
+- Base model (no CTL) achieves better boundary detection (HR@0.5 0.2813 vs 0.2763) and chorus boundary detection (CHR@0.5 0.1703 vs 0.1620)
+- CTL model achieves better function labeling (Sf 0.0952 vs 0.0536, Macro F1 0.1172 vs 0.0904)
+- CF1 (chorus pairwise F-measure) is substantially higher than PWF (0.70 vs 0.49), indicating chorus/non-chorus discrimination is easier than 7-class segmentation
+- Both variants over-segment (~2.4×) and rarely predict minority functional classes (Macro F1 < 0.12)

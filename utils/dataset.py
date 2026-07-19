@@ -41,6 +41,11 @@ class HarmonixDataset(Dataset):
         self.chunk_native_frames = int(round(CHUNK_SECONDS * NATIVE_FPS))
         self.chunk_native_frames = (self.chunk_native_frames // DOWNSAMPLE_FACTOR) * DOWNSAMPLE_FACTOR
 
+        self.melspecs = {}
+        self.b_curves = {}
+        self.f_curves = {}
+        self.token_seqs = {}
+
         self.chunks = []
         for sid in self.song_ids:
             melspec_path = os.path.join(MELSPEC_DIR, f"{sid}-mel.npy")
@@ -48,11 +53,15 @@ class HarmonixDataset(Dataset):
             if not os.path.exists(melspec_path) or not os.path.exists(seg_path):
                 continue
             melspec = np.load(melspec_path)
+            self.melspecs[sid] = melspec
             total_native = melspec.shape[1]
             total_target = int(round(total_native / DOWNSAMPLE_FACTOR))
 
             boundaries, labels = self._load_segments(seg_path)
             b_curve, f_curves, token_seq = build_targets(boundaries, labels)
+            self.b_curves[sid] = b_curve
+            self.f_curves[sid] = f_curves
+            self.token_seqs[sid] = token_seq
 
             target_len = min(len(b_curve), total_target)
             hop_frames = int(round(HOP_SECONDS * TARGET_FPS))
@@ -61,17 +70,29 @@ class HarmonixDataset(Dataset):
 
     @staticmethod
     def _load_segments(path):
-        boundaries = []
-        labels = []
+        raw_bounds = []
+        raw_labels = []
         with open(path, encoding="utf-8", errors="replace") as f:
             for line in f:
                 parts = line.strip().split(maxsplit=1)
                 if len(parts) == 2:
-                    boundaries.append(float(parts[0]))
-                    labels.append(parts[1].strip())
-        if not boundaries:
+                    raw_bounds.append(float(parts[0]))
+                    raw_labels.append(parts[1].strip())
+        if not raw_bounds:
             return [0.0], ["inst"]
-        boundaries = [0.0] + boundaries
+
+        end_time = raw_bounds[-1]
+        boundaries = []
+        labels = []
+        for b, l in zip(raw_bounds, raw_labels):
+            if l == "end":
+                end_time = b
+            else:
+                boundaries.append(b)
+                labels.append(l)
+        if not labels:
+            return [0.0], ["inst"]
+        boundaries.append(end_time)
         return boundaries, labels
 
     def __len__(self):
@@ -79,10 +100,10 @@ class HarmonixDataset(Dataset):
 
     def __getitem__(self, idx):
         sid, target_offset = self.chunks[idx]
-        melspec = np.load(os.path.join(MELSPEC_DIR, f"{sid}-mel.npy"))
-        seg_data = self._load_segments(os.path.join(SEGMENT_DIR, f"{sid}.txt"))
-        boundaries, labels = seg_data
-        b_curve, f_curves, token_seq = build_targets(boundaries, labels)
+        melspec = self.melspecs[sid]
+        b_curve = self.b_curves[sid]
+        f_curves = self.f_curves[sid]
+        token_seq = self.token_seqs[sid]
 
         native_offset = target_offset * DOWNSAMPLE_FACTOR
         native_end = native_offset + self.chunk_native_frames

@@ -1,7 +1,6 @@
 """On-the-fly audio augmentations for mel spectrograms."""
 
 import torch
-import torchaudio
 import numpy as np
 
 
@@ -37,6 +36,7 @@ class FilterAugmentation:
     def __call__(self, melspec):
         if np.random.random() > self.p:
             return melspec
+        import torchaudio
         freq = np.random.uniform(50, 500)
         if np.random.random() < 0.5:
             sos = torchaudio.functional.highpass_biquad(
